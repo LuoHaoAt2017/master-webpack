@@ -10,6 +10,10 @@ import '@/assets/scss/app.scss';
 
 const navs = [
 	{
+		label: '首页',
+		value: '/home'
+	},
+	{
 		label: '代码转换',
 		value: '/transcoder'
 	},
