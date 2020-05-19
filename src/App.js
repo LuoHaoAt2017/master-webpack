@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Redirect, Link, Switch } from 'react-router-dom';
 import Home from '@/views/home';
-import AutoRefresh from '@/views/auto-refresh';
+import HMR from '@/views/hot-module-replace';
 import CodeSegment from '@/views/code-segment';
 import Compression from '@/views/file-compression';
 import ModuleMerge from '@/views/module-merge';
@@ -30,8 +30,8 @@ const navs = [
 		value: '/module-merge'
 	},
 	{
-		label: '自动刷新',
-		value: '/auto-refresh'
+		label: '模块热替换',
+		value: '/hot-module-replace'
 	}
 ];
 
@@ -66,8 +66,8 @@ class App extends React.Component {
 							<Route path="/home">
 								<Home />
 							</Route>
-							<Route path="/auto-refresh">
-								<AutoRefresh />
+							<Route path="/hot-module-replace">
+								<HMR />
 							</Route>
 							<Route path="/code-segment">
 								<CodeSegment />

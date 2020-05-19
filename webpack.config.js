@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
@@ -24,19 +25,19 @@ module.exports = {
                 sideEffects: false
             },
             {
-                test: /\.css$/,
+                test: /\.(css|scss)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
                 use: [
+                    "style-loader",
                     {
-                        loader: MiniCssExtractPlugin.loader
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: process.env.NODE_ENV === 'development',
+                        }
                     },
-                    "css-loader"
+                    "css-loader",
+                    'sass-loader'
                 ]
-            },
-            {
-                test: /\.scss$/,
-                exclude: path.resolve(__dirname, 'node_modules'),
-                use: ['css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -60,9 +61,14 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.md$/,
+                use: "raw-loader"
+            },
         ]
     },
+    devtool: 'inline-source-map', // 开发环境使用
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
@@ -73,7 +79,9 @@ module.exports = {
             filename: "[name].css"
         }),
         new CleanWebpackPlugin(),
-        new OptimizeCSSAssetsPlugin()
+        new OptimizeCSSAssetsPlugin(),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
         port: 3000,
@@ -90,7 +98,8 @@ module.exports = {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
                 exclude: path.resolve(__dirname, 'node_modules'),
-                parallel: true
+                parallel: true,
+                // sourceMap: true
             })
         ]
     }
