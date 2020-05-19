@@ -1,14 +1,14 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
     mode: 'development',
     entry: {
-        main: path.resolve(__dirname, 'src/main.js'),
-        //app: path.resolve(__dirname, 'src/server/index.js'),
+        main: path.resolve(__dirname, 'src/main.js')
     },
     output: {
         filename: '[name].bundle.js',
@@ -24,24 +24,56 @@ module.exports = {
                 sideEffects: false
             },
             {
-                test: /\.(css|scss)$/,
+                test: /\.css$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    "css-loader"
+                ]
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.scss$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
-                use: ['file-loader']
+                use: ['css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+                    }
+                ],
+                exclude: path.resolve(__dirname, 'node_modules'),
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 6291456,//默认单位为bytes
+                        }
+                    }
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './public/index.html')
+            template: path.resolve(__dirname, './public/index.html'),
+            filename: 'index.html',
+            hash: true
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css"
         }),
         new CleanWebpackPlugin(),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new OptimizeCSSAssetsPlugin()
     ],
     devServer: {
         port: 3000,
@@ -53,20 +85,13 @@ module.exports = {
         }
     },
     optimization: {
-        minimize: true,
         minimizer: [
-            new TerserPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true, // Must be set to true if using source-maps in production
-            }),
-        ],
-        splitChunks: {
-            name: 'commons',
-            chunks: 'async',
-            minChunks: 1,
-            maxAsyncRequests: 5,
-            maxInitialRequests: 3,
-        }
+            new UglifyjsWebpackPlugin({
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+                exclude: path.resolve(__dirname, 'node_modules'),
+                parallel: true
+            })
+        ]
     }
 };
