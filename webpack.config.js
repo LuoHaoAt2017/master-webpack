@@ -1,13 +1,8 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
     entry: {
         main: path.resolve(__dirname, 'src/main.js')
     },
@@ -29,12 +24,6 @@ module.exports = {
                 exclude: path.resolve(__dirname, 'node_modules'),
                 use: [
                     "style-loader",
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: process.env.NODE_ENV === 'development',
-                        }
-                    },
                     "css-loader",
                     'sass-loader'
                 ]
@@ -68,39 +57,17 @@ module.exports = {
             },
         ]
     },
-    devtool: 'inline-source-map', // 开发环境使用
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
             filename: 'index.html',
             hash: true
         }),
-        new MiniCssExtractPlugin({
-            filename: "[name].css"
-        }),
-        new CleanWebpackPlugin(),
-        new OptimizeCSSAssetsPlugin(),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
+        new CleanWebpackPlugin()
     ],
-    devServer: {
-        port: 3000,
-        hot: true
-    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src')
         }
-    },
-    optimization: {
-        minimizer: [
-            new UglifyjsWebpackPlugin({
-                test: /\.js$/,
-                include: path.resolve(__dirname, 'src'),
-                exclude: path.resolve(__dirname, 'node_modules'),
-                parallel: true,
-                // sourceMap: true
-            })
-        ]
     }
 };
