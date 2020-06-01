@@ -1,32 +1,33 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+
+function resolve(param) {
+    return path.resolve(__dirname, param);
+}
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, 'src/main.js')
+        main: resolve('src/main.js')
     },
     output: {
         filename: '[name].bundle.js',
         chunkFilename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: resolve('dist')
     },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                use: ['babel-loader', 'eslint-loader'],
+                use: ['babel-loader'],
                 include: path.resolve(__dirname, 'src'),
                 sideEffects: false
             },
             {
-                test: /\.(css|scss)$/,
+                test: /\.scss$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    'sass-loader'
-                ]
+                use: ['css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -69,5 +70,14 @@ module.exports = {
         alias: {
             '@': path.resolve(__dirname, 'src')
         }
+    },
+    optimization: {
+        minimizer: [
+            new UglifyWebpackPlugin({
+                test: /\.js$/i,
+                parallel: true, // 并行构建，加快构建，缩短时间。
+                include: resolve('src')
+            })
+        ]
     }
 };

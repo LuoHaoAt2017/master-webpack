@@ -91,11 +91,17 @@ class App extends React.Component {
 		)
 	}
 
+	componentDidMount() {
+		const url = process.env.APP_URL;
+		console.log(url);
+	}
+
 	changeRoute(value) {
 		this.setState({
 			route: value
 		});
 	}
+
 
 }
 
