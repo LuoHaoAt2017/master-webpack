@@ -4,6 +4,7 @@
     "start": "webpack-dev-server --open --config webpack.config.js",
     "serve": "webpack-dev-server --open --config webpack.prod.js",
     "build": "webpack --progress --open --config webpack.prod.js",
+    "eslint": "eslint --ext .jsx,.js src/",
     "http-server": "http-server"
   },
   "devDependencies": {
@@ -14,6 +15,9 @@
     "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
+    "eslint": "^7.1.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
