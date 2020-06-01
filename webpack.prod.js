@@ -10,19 +10,21 @@ module.exports = WebpackMerge(config, {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.(css|scss)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
                 use: [{
                     loader: MiniCssExtractPlugin.loader,
                     options: {
                         hmr: false //关闭样式的热替换
                     }
-                }, 'css-loader']
+                }, 'css-loader','sass-loader']
             },
         ]
     },
     devServer: {
-        port: 8099
+        port: 8099,
+        quiet: true,
+        hot: false //关闭模块热替换
     },
     plugins: [
         new webpack.DefinePlugin({

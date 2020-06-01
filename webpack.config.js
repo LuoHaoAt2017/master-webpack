@@ -6,7 +6,6 @@ const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 function resolve(param) {
     return path.resolve(__dirname, param);
 }
-
 module.exports = {
     entry: {
         main: resolve('src/main.js')
@@ -21,13 +20,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 use: ['babel-loader'],
-                include: path.resolve(__dirname, 'src'),
-                sideEffects: false
-            },
-            {
-                test: /\.scss$/,
-                exclude: path.resolve(__dirname, 'node_modules'),
-                use: ['css-loader', 'sass-loader']
+                include: path.resolve(__dirname, 'src')
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -74,7 +67,7 @@ module.exports = {
     optimization: {
         minimizer: [
             new UglifyWebpackPlugin({
-                test: /\.js$/i,
+                test: /\.js$/,
                 parallel: true, // 并行构建，加快构建，缩短时间。
                 include: resolve('src')
             })

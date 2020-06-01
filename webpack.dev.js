@@ -1,21 +1,26 @@
 const path = require('path');
 const webpack = require('webpack');
 const WebpackMerge = require('webpack-merge');
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+//const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const config = require('./webpack.config');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const smp = new SpeedMeasurePlugin();
+const SizePlugin = require('size-plugin');
 
-module.exports = WebpackMerge(config, {
+module.exports = smp.wrap(WebpackMerge(config, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        port: 8090
+        port: 8090,
+        quiet: false,
+        hot: true //开启模块热替换
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.(css|scss)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
-                use: ['style-loader','css-loader']
+                use: ['style-loader','css-loader','sass-loader']
             },
         ]
     },
@@ -24,6 +29,7 @@ module.exports = WebpackMerge(config, {
             'process.env.NODE_ENV': JSON.stringify('production'), //必须添加JSON.stringify
             'process.env.APP_URL': JSON.stringify('http://yyy')
         }),
-        new BundleAnalyzerPlugin()
+        new SizePlugin()
+        //new BundleAnalyzerPlugin()
     ]
-});
+}));
