@@ -13,24 +13,24 @@ module.exports = {
         main: resolve('src/main.js')
     },
     output: {
-        filename: '[name].bundle.js',
-        chunkFilename: '[name].bundle.js',
+        filename: 'js/[name].bundle.js',
         path: resolve('dist')
     },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                use: ['babel-loader'],
+                loader: 'babel-loader',
                 include: path.resolve(__dirname, 'src')
             },
             {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
-                        loader: 'url-loader',
+                        loader: 'file-loader',
                         options: {
-                            limit: 8192
+                            name: '[name][hash:8].[ext]',
+                            outputPath: 'images/'
                         }
                     }
                 ],
@@ -40,9 +40,10 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [
                     {
-                        loader: 'url-loader',
+                        loader: 'file-loader',
                         options: {
-                            limit: 6291456,//默认单位为bytes
+                            name: '[name][hash:8].[ext]',
+                            outputPath: 'fonts/'
                         }
                     }
                 ]

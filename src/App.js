@@ -49,7 +49,6 @@ class App extends React.Component {
 		return (
 			<Router>
 				<div className='root'>
-					<AAA/>
 					<div className='navigator'>
 						<ul>
 							{
@@ -85,7 +84,6 @@ class App extends React.Component {
 							</Route>
 							<Redirect to="/home" />
 						</Switch>
-
 					</div>
 					<div className='foot'></div>
 				</div>
@@ -103,8 +101,6 @@ class App extends React.Component {
 			route: value
 		});
 	}
-
-
 }
 
 export default App;

@@ -12,12 +12,7 @@ module.exports = WebpackMerge(config, {
             {
                 test: /\.(css|scss)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
-                use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        hmr: false //关闭样式的热替换
-                    }
-                }, 'css-loader','sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
         ]
     },
@@ -32,7 +27,7 @@ module.exports = WebpackMerge(config, {
             'process.env.APP_URL': JSON.stringify('http://xxx')
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css'
+            filename: 'css/[name][contenthash].css'
         })
     ]
 });

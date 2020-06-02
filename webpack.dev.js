@@ -20,7 +20,7 @@ module.exports = smp.wrap(WebpackMerge(config, {
             {
                 test: /\.(css|scss)$/,
                 exclude: path.resolve(__dirname, 'node_modules'),
-                use: ['style-loader','css-loader','sass-loader']
+                use: ['style-loader','css-loader', 'sass-loader']
             },
         ]
     },
