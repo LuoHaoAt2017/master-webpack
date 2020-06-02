@@ -6,7 +6,9 @@ const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 function resolve(param) {
     return path.resolve(__dirname, param);
 }
+
 module.exports = {
+    watch: true, // 开启监听模式，文件发生变化，重新编译，webpack-dev-server 默认开启监听模式。
     entry: {
         main: resolve('src/main.js')
     },

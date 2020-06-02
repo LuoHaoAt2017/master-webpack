@@ -1,11 +1,11 @@
 import React from 'react';
-import { HashRouter as Router, Route, Redirect, Link, Switch } from 'react-router-dom';
-import Home from '@/views/home';
-import HMR from '@/views/hot-module-replace';
-import CodeSegment from '@/views/code-segment';
-import Compression from '@/views/file-compression';
-import ModuleMerge from '@/views/module-merge';
-import Transcoder from '@/views/transcoder';
+import { 
+	HashRouter as Router, 
+	Route, 
+	Redirect, 
+	Link, 
+	Switch
+} from 'react-router-dom';
 import '@/assets/scss/app.scss';
 
 const navs = [
@@ -45,16 +45,15 @@ class App extends React.Component {
 	}
 
 	render() {
-		return (
-			<Router>
+		return (<Router>
 				<div className='root'>
 					<div className='navigator'>
 						<ul>
 							{
 								navs.map((elem, index) => (
-									<li key={index} 
-										onClick={() => {this.changeRoute(elem.value)}}
-										className={this.state.route === elem.value ? 'active': null}>
+									<li key={index}
+										onClick={() => { this.changeRoute(elem.value) }}
+										className={this.state.route === elem.value ? 'active' : null}>
 										<Link to={elem.value}>{elem.label}</Link>
 									</li>
 								))
@@ -64,31 +63,29 @@ class App extends React.Component {
 					<div className='content'>
 						<Switch>
 							<Route path="/home">
-								<Home />
+								{async () => await import('@/views/home')}
 							</Route>
 							<Route path="/hot-module-replace">
-								<HMR />
+								{async () => await import('@/views/hot-module-replace')}
 							</Route>
 							<Route path="/code-segment">
-								<CodeSegment />
+								{async () => await import('@/views/code-segment')}
 							</Route>
 							<Route path="/compression">
-								<Compression />
+								{async () => await import('@/views/file-compression')}
 							</Route>
 							<Route path="/module-merge">
-								<ModuleMerge />
+								{async () => await import('@/views/module-merge')}
 							</Route>
 							<Route path="/transcoder">
-								<Transcoder />
+								{async () => await import('@/views/transcoder')}
 							</Route>
 							<Redirect to="/home" />
 						</Switch>
-
 					</div>
 					<div className='foot'></div>
 				</div>
-			</Router>
-		)
+			</Router>)
 	}
 
 	componentDidMount() {
