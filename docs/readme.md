@@ -40,6 +40,10 @@ source-map 是将编译、打包、压缩后的代码映射回源代码的过程
 - 缩小打包作用域 (exclude/include)
 - 多进程构建 thread-loader
 - 多进程并行压缩 webpack-uglify-js-plugin 中的paralle选项
+- Tree shaking 
+描述移除 JavaScript 上下文中的未引用代码
+JS的Tree shaking要生效，需要采取ES2015 模块系统 import export。
+css默认支持Tree shaking，但是可以通过purgecss-webpack-plugin实现。
 
 ### 文件监听原理
 轮询判断文件的最后编辑时间是否变化，如果某个文件发生了变化，

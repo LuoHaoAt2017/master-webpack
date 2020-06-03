@@ -1,6 +1,9 @@
 const path = require('path');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// 将未用到的css进行清除(css的Tree-Shaking)
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const smp = new SpeedMeasurePlugin();
@@ -70,7 +73,10 @@ module.exports = smp.wrap({
             filename: 'index.html',
             hash: true
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new PurgecssPlugin({
+            paths: glob.sync(`${resolve('src')}/**/*`, { nodir: true })
+        })
     ],
     resolve: {
         alias: {
