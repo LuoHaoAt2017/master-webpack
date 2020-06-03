@@ -38,6 +38,22 @@ const navs = [
 	{
 		label: '模块热替换',
 		value: '/hot-module-replace'
+	},
+	{
+		label: 'webpack性能优化',
+		value: '/optimization'
+	},
+	{
+		label: '文件监听原理',
+		value: '/monitor'
+	},
+	{
+		label: '自定义loader',
+		value: '/loader'
+	},
+	{
+		label: '自定义plugin',
+		value: '/plugin'
 	}
 ];
 

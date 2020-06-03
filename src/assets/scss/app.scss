@@ -13,8 +13,8 @@
         ul {
             display: grid;
             grid-auto-flow: row;
-            grid-template-columns: repeat(6, 1fr);
-            grid-column-gap: 10px;
+            grid-template-columns: repeat(10, auto);
+            //grid-column-gap: 10px;
             justify-content: space-between;
             align-content: center;
             li {
@@ -23,7 +23,7 @@
                 list-style: none;
                 display: block;
                 border: 1px solid #eeeeee;
-                padding: 10px 20px;
+                padding: 10px 10px;
                 border-radius: 5px; 
                 background: #ffffff;
                 color: #000000;
@@ -31,6 +31,7 @@
                     text-align: center;
                     text-decoration: none;
                     outline: none;
+                    white-space: nowrap;
                 }
             }
             li.active {
