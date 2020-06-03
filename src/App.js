@@ -6,8 +6,13 @@ import CodeSegment from '@/views/code-segment';
 import Compression from '@/views/file-compression';
 import ModuleMerge from '@/views/module-merge';
 import Transcoder from '@/views/transcoder';
+// const Home = () => import('@/views/home');
+// const HMR = () => import('@/views/hot-module-replace');
+// const CodeSegment = () => import('@/views/code-segment');
+// const Compression = () => import('@/views/file-compression');
+// const ModuleMerge = () => import('@/views/module-merge');
+// const Transcoder = () => import('@/views/transcoder');
 import '@/assets/scss/app.scss';
-import AAA from './AAA.js';
 
 const navs = [
 	{
@@ -65,7 +70,7 @@ class App extends React.Component {
 					<div className='content'>
 						<Switch>
 							<Route path="/home">
-								<Home />
+								<Home/>
 							</Route>
 							<Route path="/hot-module-replace">
 								<HMR />
