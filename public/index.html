@@ -1,18 +1,73 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>重学webpack</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.15/lodash.core.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;language=en&amp;key=AIzaSyDeWM4SpCW_wBZQMOb3xGbV9E-l9knSUVk"></script>
-    <script defer type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
-    <script defer type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
-    <script defer type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
-    <script defer type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
-</head>
-<body>
-    <div id="root"></div>
-</body>
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <link rel="icon" href="data:image/ico;base64,aWNv" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1089771_5qr5jh94w8p.css">
+    <script type="text/javascript" src="https://g.alicdn.com/dingding/dingtalk-jsapi/2.7.13/dingtalk.open.js"></script>
+    <title></title>
+    <script>
+      var parseUrlParam = function(urls, param) {
+        var url = urls;
+        var searchIndex = url.indexOf('?');
+        var jhIndex = url.indexOf('#');
+        if (jhIndex > -1) {
+          url = url.substr(0, jhIndex);
+        }
+        var searchParams = url.slice(searchIndex + 1).split('&');
+        for (var i = 0; i < searchParams.length; i += 1) {
+          var items = searchParams[i].split('=');
+          if (items[0].trim().toLowerCase() === param.toLowerCase()) {
+            var tmp = searchParams[i];
+            return tmp.substr(tmp.indexOf('=') + 1);
+          }
+        }
+        return null;
+      };
+      var isDingtalk = /DingTalk/.test(navigator.userAgent);
+      if (isDingtalk) {
+        var dingAppId = parseUrlParam(window.location.href, 'dingappid');
+        if (dingAppId && window.location.host.indexOf('h3yun.com') > 0) {
+          !(function(c, i, e, b) {
+            var h = i.createElement('script');
+            var f = i.getElementsByTagName('script')[0];
+            h.type = 'text/javascript';
+            h.crossorigin = true;
+            h.onload = function() {
+              c[b] || (c[b] = new c.wpkReporter({ bid: 'dta_2_' + dingAppId }));
+              c[b].installAll();
+            };
+            f.parentNode.insertBefore(h, f);
+            h.src = e;
+          })(
+            window,
+            document,
+            'https://g.alicdn.com/woodpeckerx/jssdk??wpkReporter.js',
+            '__wpk'
+          );
+        }
+      }
+    </script>
+  </head>
+
+  <body class="app-container-box">
+    <input name="mt" type="hidden" value="<%= htmlWebpackPlugin.options.lastModified %>">
+    <input name="v" type="hidden" value="<%= htmlWebpackPlugin.options.version %>">
+    <div id="app"></div>
+  </body>
 </html>

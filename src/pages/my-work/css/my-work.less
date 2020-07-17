@@ -1,0 +1,77 @@
+@baseFontSize: 75;
+.px2rem(@name,@px) {
+  @{name}: @px/@baseFontSize * 1rem;
+}
+.workflow-view {
+  .search-bar {
+    position: relative;
+    .px2rem(padding-left, 30);
+    .px2rem(padding-right, 30);
+    background-color: white;
+    .searchBarWarpper {
+      .px2rem(width, 596);
+      form {
+        padding: 0;
+      }
+    }
+    .filter {
+      position: absolute;
+      top: 0;
+      color: #666;
+      .px2rem(right, 32);
+      .px2rem(height, 88);
+      .px2rem(line-height, 88);
+      .px2rem(font-size, 32);
+      white-space: nowrap;
+      &:before {
+        content: '';
+      }
+    }
+    .filter-active {
+      color: #1890FF;
+    }
+  }
+  .h3-search-focus {
+    width: 100% !important;
+  }
+  .h3-search-result{
+    background: #F8F8F8;
+    .px2rem(padding-top, 22);
+    .px2rem(padding-bottom, 21);
+    .px2rem(font-size, 26);
+    .px2rem(line-height, 37);
+    color: #999;
+  }
+  .h3-search-no-data {
+    text-align: center;
+    .px2rem(font-size, 26);
+    .px2rem(margin-top, 54);
+    color: #999;
+  }
+  .filter-padding {
+    padding-top: 40px;
+  }
+  &.workflow-view-circulate{
+    .h3-swipeout-item{
+      .filter-padding {
+        padding-top: 0px;
+      }
+    }
+    .h3-swipeout-item:first-child{
+      &.filter{
+        .h3-swipeout-button-box{
+          padding-top: 40px;
+        }
+      }
+      .filter-padding {
+        padding-top: 40px;
+      }
+    }
+  }
+  .h3-modal-body {
+    overflow: hidden!important;
+  }
+  .h3-modal-body > div {
+    height: 100%;
+  }
+}

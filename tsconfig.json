@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "checkJs": false,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.js",
+    "node_modules/h3-mobile-vue/**/*.ts",
+    "node_modules/h3-template-detail/**/*.ts",
+    "node_modules/@h3/thinking-ui/**/*.ts",
+    "node_modules/@h3yun/**/*.ts",
+    "node_modules/h3yun-formlogic/**/*.ts",
+    "node_modules/h3yun-formlogic/**/*.opts.ts",
+    "node_modules/@h3/thinking-ui/node_modules/@h3/theme-mobile/**/*.ts"
+  ]
+}

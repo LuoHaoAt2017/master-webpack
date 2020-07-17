@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="317px" height="223px" viewBox="0 0 317 223" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>编组 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="版本更新" transform="translate(-224.000000, -329.000000)">
+            <g id="编组-2" transform="translate(217.000000, 329.000000)">
+                <polygon id="星形" fill="#FFC53D" transform="translate(289.970563, 174.970563) rotate(-315.000000) translate(-289.970563, -174.970563) " points="289.970563 180.970563 281.485281 183.455844 283.970563 174.970563 281.485281 166.485281 289.970563 168.970563 298.455844 166.485281 295.970563 174.970563 298.455844 183.455844"></polygon>
+                <polygon id="星形备份" fill="#FFC53D" transform="translate(22.000000, 43.000000) rotate(-315.000000) translate(-22.000000, -43.000000) " points="22 50.5 11.3933983 53.6066017 14.5 43 11.3933983 32.3933983 22 35.5 32.6066017 32.3933983 29.5 43 32.6066017 53.6066017"></polygon>
+                <circle id="椭圆形" stroke="#5288FF" stroke-width="8" cx="292.5" cy="13.5" r="9.5"></circle>
+                <circle id="椭圆形备份-6" fill="#FFC53D" cx="319.5" cy="201.5" r="4.5"></circle>
+                <path d="M56.6149937,206.068354 L67.6149937,206.068354 C66.1316535,209.057872 65.3899834,211.617953 65.3899834,213.748595 C65.3899834,215.879237 66.5159278,218.575713 68.7678166,221.838022 L57.7678166,221.838022 C55.6845319,218.616328 54.6428895,215.793069 54.6428895,213.368245 C54.6428895,210.94342 55.3002575,208.510123 56.6149937,206.068354 Z" id="矩形" fill="#FF7946" transform="translate(61.705353, 213.953188) rotate(-37.000000) translate(-61.705353, -213.953188) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

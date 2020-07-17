@@ -1,0 +1,18 @@
+<template>
+  <h3-switch platform="android" color="red" :checked="true" @onClick="switchClick">
+  </h3-switch>
+  <h3-switch platform="android" @onClick="switchClick" :h3style="{backgroundColor:'red'}" >
+  </h3-switch>
+  <h3-list>
+    <h3-list-item >
+      <span>switch disabled</span>
+      <h3-switch slot="extra" :disabled="true"></h3-switch>
+    </h3-list-item>
+  </h3-list>
+  <h3-list>
+    <h3-list-item >
+      <span>switch</span>
+      <h3-switch slot="extra" v-model="testRadioValue"></h3-switch>
+    </h3-list-item>
+  </h3-list>
+</template>

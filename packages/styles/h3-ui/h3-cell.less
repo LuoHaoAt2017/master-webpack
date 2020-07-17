@@ -1,0 +1,121 @@
+@import "../mixins.less";
+@import '../setArrow.less';
+
+.h3-cells {
+    margin-top: @h3CellsMarginTop;
+    background-color: @h3CellBg;
+    line-height: @h3CellLineHeight;
+    font-size: @h3CellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
+
+    overflow: hidden; //因为每个cell的border使用before元素left搞的，ie下伪元素的containing block估计跟标准不同，在cell上用oh不生效
+
+    // onepx
+    position: relative;
+    &:before {
+        .setTopLine(@h3CellBorderColor);
+    }
+    &:after {
+        .setBottomLine(@h3CellBorderColor);
+    }
+}
+
+.h3-cells__title {
+    margin-top: @group-title-margin-top; // 15px - 行高
+    margin-bottom: @group-title-margin-bottom; // 8px - 行高
+    padding-left: @h3CellGapH;
+    padding-right: @h3CellGapH;
+    color: @h3TextColorGray;
+    font-size: @h3CellTipsFontSize;
+
+    & + .h3-cells {
+        margin-top: 0;
+    }
+}
+
+.h3-cells__tips {
+    margin-top: .3em; // 8px - 行高
+    color: @h3TextColorGray;
+    padding-left: @h3CellGapH;
+    padding-right: @h3CellGapH;
+    font-size: @h3CellTipsFontSize;
+}
+
+.h3-cell {
+    padding: @h3CellGapV @h3CellGapH;
+    position: relative; //这个是为了兼容cells容器onepx方案被before挡住而做的
+    display: flex;
+    align-items: center;
+    &:before {
+        .setTopLine(@h3CellBorderColor);
+        left: @h3CellGapH;
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.h3-cell_primary{
+    align-items: flex-start;
+}
+.h3-cell__bd{
+    flex: 1;
+}
+.h3-cell__ft {
+    text-align: right;
+    color: #999;
+}
+.h3-cell-justify {
+  height: unit(@h3CellLineHeight, em);
+  &&:after {
+    content: ".";
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.h3-cell_access {
+  .setTapColor();
+  color: inherit;
+  &:active {
+      background-color: #ECECEC;
+  }
+  .h3-cell__ft {
+      padding-right: 13px;
+      position: relative;
+      // &:after {
+      //     content: " ";
+      //     .setArrow(right, @cell-default-arrow-width, @cell-default-arrow-color, @cell-default-arrow-border-width);
+      //     position: absolute;
+      //     top: 50%;
+      //     margin-top: -4px;
+      //     right: 2px;
+      // }
+  }
+}
+.h3-cell_link{
+  color: @h3LinkColorDefault;
+  font-size: 14px;
+
+  // 由于h3-cell:first-child的:before为隐藏，所以这里要重新显示出来
+  &:first-child{
+      &:before{
+          display: block;
+      }
+  }
+}
+
+.h3-cell_access.h3-cell-box {
+  padding-right: 13px;
+  position: relative;
+  &:after {
+      content: " ";
+      .setArrow(right, @cell-default-arrow-width, @cell-default-arrow-color, @cell-default-arrow-border-width);
+      position: absolute;
+      top: 50%;
+      margin-top: -4px;
+      right: 17px;
+  }
+}

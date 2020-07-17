@@ -1,0 +1,30 @@
+<h3-list>
+  <h3-wingblank>
+    <h3-whitespace></h3-whitespace>
+    <h3-card
+      title="this is title">
+    <template slot="headerThumb">
+      <img src="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png"></img>
+    </template>
+    <template slot="headerExtra">
+      <span>this is extra</span>
+    </template>
+    <div>this is content of 'Card'</div>
+    <div slot="footerContent">footer content</div>
+    <div slot="footerExtra">extra footer content</div>
+    </h3-card>
+    <h3-whitespace></h3-whitespace>
+  </h3-wingblank>
+</h3-list>
+<h3-card
+  title="this is title" :full="true">
+  <template slot="headerThumb">
+    <img src="https://cloud.githubusercontent.com/assets/1698185/18039916/f025c090-6dd9-11e6-9d86-a4d48a1bf049.png"></img>
+  </template>
+  <template slot="headerExtra">
+    <span>this is extra</span>
+  </template>
+  <div>this is content of 'Card'</div>
+  <div slot="footerContent">footer content</div>
+  <div slot="footerExtra">extra footer content</div>
+</h3-card>

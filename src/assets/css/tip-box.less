@@ -1,0 +1,115 @@
+.app-container-box .weui-toast{
+    // .px2rem(width, 280) !important;
+    .px2rem(min-width, 280);
+    .px2rem(max-width, 560);
+    .px2rem(padding-top, 20);
+    .px2rem(padding-bottom, 37);
+    .px2rem(padding-left, 20);
+    .px2rem(padding-right, 20);
+    width: auto;
+    background: #333;
+    opacity: 0.9;
+    box-sizing: border-box;
+    margin-left: 0;
+    transform: translateX(-50%);
+    z-index: 9999999999;
+    .weui-icon_toast{
+        margin: 0; 
+    }
+
+    .define-icon{
+        .px2rem(font-size, 55) !important;
+        // font-size: 40px;
+        margin: 10px 0 20px 0;
+        display: block;
+    }
+
+    .weui-toast__content{
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.app-container-box .weui-toast.weui-toast_text{
+    .px2rem(width, 560) !important;
+    .px2rem(border-radius, 12);
+    .px2rem(padding-top, 20);
+    .px2rem(padding-bottom, 20);
+    .px2rem(padding-left, 49);
+    .px2rem(padding-right, 49);
+    background: #4FA9AA;
+    height: auto;
+}
+
+.app-container-box .weui-toast.weui-toast_forbidden{
+    color: #fff;
+    .weui-icon_toast.weui-icon-success-no-circle:before{
+        color: #fff;
+    }
+}
+
+.app-container-box .weui-icon_toast.weui-loading{
+    .px2rem(width, 80);
+    .px2rem(height, 80);
+    .px2rem(margin-bottom, 10);
+}
+
+.weui-toast_cancel .weui-icon_toast:before{
+    content: "\A022";
+}
+
+.app-container-box .vux-confirm{
+    .px2rem(border-radius, 9);
+    z-index: 9999999999;
+    .weui-mask{
+        background: rgba(0, 0, 0, 0.16);
+    }
+
+    .weui-dialog{
+        .px2rem(width, 570) !important;
+        top: 40%;
+
+        .weui-dialog__bd{
+            min-height: auto;
+            padding: 0;
+            // .px2rem(height, 200);
+            
+            &:first-child{
+                padding: 0;
+                color: #333;
+                // .px2rem(font-size, 52);
+                .px2rem(margin-top, 40);
+                .px2rem(margin-bottom, 63);
+                .px2rem(margin-left, 20);
+                .px2rem(margin-right, 20);
+            } 
+
+            &>div{
+                font-size: 17px;
+            }
+        }
+
+        .weui-dialog__ft{
+
+            a:active{
+                background-color: #F2F3F5;
+            }
+
+            .weui-dialog__btn_default{
+                color: #999;
+                font-size: 18px;
+            }
+            .weui-dialog__btn_primary{
+                color: #108ee9;
+                font-size: 18px;
+                &:after{
+                    top: 14px;
+                    height: 20px;
+                }
+            }
+        }
+        
+    }
+    
+    
+}

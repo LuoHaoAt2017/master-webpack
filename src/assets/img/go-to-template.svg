@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="88px" viewBox="0 0 119 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>模版</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="22" height="22" rx="4"></rect>
+        <filter x="-11.4%" y="-11.4%" width="145.5%" height="122.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="5" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.356862745   0 0 0 0 0.588235294   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="22" height="22" rx="4"></rect>
+        <filter x="-11.4%" y="-11.4%" width="145.5%" height="122.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="5" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.356862745   0 0 0 0 0.588235294   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="0" width="22" height="22" rx="4"></rect>
+        <filter x="-11.4%" y="-11.4%" width="145.5%" height="122.7%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="5" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.356862745   0 0 0 0 0.588235294   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-7" x="0" y="0" width="22" height="22" rx="4"></rect>
+        <filter x="-11.4%" y="-11.4%" width="145.5%" height="122.7%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="5" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.356862745   0 0 0 0 0.588235294   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0422-新建应用-弹窗" transform="translate(-88.000000, -679.000000)">
+            <g id="Group-7" transform="translate(40.000000, 628.000000)">
+                <g id="Group-2">
+                    <g id="模版" transform="translate(107.500000, 95.000000) scale(-1, 1) translate(-107.500000, -95.000000) translate(48.000000, 51.000000)">
+                        <g id="起重机" transform="translate(59.500000, 44.000000) scale(-1, 1) translate(-59.500000, -44.000000) " fill="#9AC0FF">
+                            <rect id="Rectangle" x="23" y="0" width="7.84883208" height="82.7491857" rx="1.5"></rect>
+                            <rect id="Rectangle-Copy-5" x="14" y="71" width="25.7956245" height="16.3952124" rx="6"></rect>
+                            <rect id="Rectangle" x="0" y="12.975479" width="119" height="2.73253541" rx="1.3662677"></rect>
+                            <ellipse id="Oval" cx="97.0058366" cy="14.5026596" rx="3.93579767" ry="3.93351064"></ellipse>
+                            <rect id="Rectangle" x="5.09338521" y="7.42228746" width="17.5629784" height="11.4766487" rx="5.73832435"></rect>
+                        </g>
+                        <g id="Group-7-Copy" transform="translate(44.000000, 40.000000)">
+                            <g id="Rectangle-Copy-7">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use fill="#CDE0FF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                            <circle id="Oval-Copy-8" fill="#8449FF" opacity="0.5" cx="11" cy="11" r="5.07692308"></circle>
+                        </g>
+                        <g id="Group-8" transform="translate(44.000000, 65.000000)">
+                            <g id="Group-11">
+                                <g id="Rectangle-Copy-8">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                    <use fill="#CDE0FF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                </g>
+                                <circle id="Oval-Copy-9" fill="#FFBC00" opacity="0.600000024" cx="10" cy="12" r="6.07692308"></circle>
+                            </g>
+                        </g>
+                        <g id="Group-8-Copy" transform="translate(11.000000, 29.000000)">
+                            <g id="Group-11">
+                                <g id="Rectangle-Copy-8">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                    <use fill="#CDE0FF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                </g>
+                                <circle id="Oval-Copy-9" fill="#66EBCD" cx="10" cy="10" r="6.07692308"></circle>
+                            </g>
+                        </g>
+                        <g id="Group-12" transform="translate(11.000000, 65.000000)">
+                            <g id="Rectangle-Copy-9">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                                <use fill="#CDE0FF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                            </g>
+                            <circle id="Oval-Copy-12" fill="#FF6915" opacity="0.600000024" cx="11" cy="11" r="5.07692308"></circle>
+                        </g>
+                        <rect id="Rectangle" fill="#9AC0FF" x="20" y="16" width="3" height="16" rx="1.5"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

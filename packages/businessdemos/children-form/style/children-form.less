@@ -1,0 +1,277 @@
+@import '../../../styles/mixins';
+.overflow-ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.icon{
+  z-index: 3 !important;
+}
+.fixedTip{
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  .px2rem(height, 72);
+  .px2rem(top, 0);
+  .px2rem(left, 0);
+  background: #F5222D;
+  .px2rem(padding-left, 30);
+  .px2rem(padding-right, 30);
+  .px2rem(font-size, 28);
+  .px2rem(line-height ,72);
+  color:#fff;
+}
+.form-footer-btn{
+  position: absolute;
+  z-index: 99;
+  right: 0px;
+  bottom: 0px;
+  .px2rem(height,88);
+  width: 100%;
+  }
+//安卓外层吸顶(错误提示样式)依靠里面元素的阴影
+.item-title-wrapper-mistake{
+  background-color: #fff5f5 !important;
+  box-shadow: -30px 0 0 45px #fff5f5 !important;
+}
+.item-title-mistake{
+  box-shadow: -30px 0 0 0 #fff5f5 !important;
+  background-color: #fff5f5 !important;
+}
+.add-new-child-form{
+  height: 45px;
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span{
+    font-size: 17px;
+    color: #1890ff;
+  }
+  span:first-child{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+  }
+}
+.accordion-content-schema{
+  .accordion-content{
+    padding-left: 0px !important;
+  }
+}
+.accordion-content{
+  padding-left: 15px;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.h3-double-accordion .rotated{
+  transform: rotate(90deg) !important;
+  -webkit-transform: rotate(90deg)!important;
+}
+.h3-double-accordion{
+  padding-left: 15px;
+  .form-simple{
+    padding-right: 15px;    
+    &-title{
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      height: 45px;
+      line-height: 45px;
+      background-color: #FFFFFF;
+      .hairline('bottom',#eeeeee);
+      span{
+        display: inline-block;
+        text-align: center;
+        flex: 1;
+        line-height: 45px;
+        color: #999999;
+      }
+    }
+    &-details{
+      display: flex;
+      position: relative;
+      min-height: 45px;
+      .hairline('bottom',#eeeeee);
+      span{
+        display: inline-block;
+        text-align: center;    
+        align-self: center;            
+        flex: 1;
+        color: #333333;
+        word-wrap: break-word;
+        width: 110px;
+      }
+    }
+
+  }
+  .form-title{
+    color: #333333;
+    font-size: 17px;
+  }
+  .form-template{
+    color: #1890ff;
+    font-size: 17px;
+    float: right;
+  }
+  .form-details{
+    margin-left: 4px;
+    display: flex;
+    min-height: 45px;
+    line-height: 45px;
+  }
+  .form-details-index{
+    color: #333333;
+    font-size: 17px;
+    max-width: 10px;
+    margin-right: 12px;
+  }
+  .form-details-title{
+    display: inline-block;
+    width: 102px;
+    color: #999999;
+    font-size: 17px;
+    margin-right: 24px;
+  }
+  .form-details-parmers-title{
+    display: inline-block;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+    font-size: 17px;
+  }
+  .form-details-parmers{
+    display: inline-block;
+    max-width: 150px;
+    color: #333333;
+    font-size: 17px;
+    word-wrap: break-word;
+    line-height: normal;
+    align-self: center;
+  }
+  .form-tools{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    .px2rem(height, 90);
+    div{
+      color: #1890ff;
+      line-height: 24px;
+      font-size: 17px;
+      span{
+        color: #1890ff;
+        font-size: 17px;
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+
+  }
+  .h3-accordion{
+    padding-left: 0;
+  }
+}
+
+.h3-accordion{
+  .item{
+    position: relative;
+    .hairline('bottom', #eee);
+  }
+}
+
+.stay-top{
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: -1px;
+  left: 0;
+  z-index: 999;
+  // pointer-events: none !important;
+}
+.stay-top-second{
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 45px;
+  left: 0;
+  z-index: 998;
+  // pointer-events: none !important;
+}
+.staticHeader{
+  position: fixed;
+  // z-index: 99999;
+  width: 100%;
+}
+.mescroll{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.staticFlowTab{
+  height: 45px;
+  font-size: 17px;
+  line-height: 45px;
+  background: #FFFFFF;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-right: 15px;
+  box-shadow: -15px 0 0 0 #fff;
+  .hairline('bottom', #eee);
+  .icon{
+    font-size: 12px;
+    line-height: normal;
+    margin-right: 8px;
+  }
+  .rotated{
+    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg) !important;
+  }
+  .list-accordion-title-wrapper{
+    width: 100%;
+  }
+}
+.static-item-child-title{
+  height: 45px;
+  font-size: 17px;
+  line-height: 45px;
+  background: #FFFFFF;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-shadow: -15px 0 0 0 #fff;
+  .icon{
+    font-size: 12px;
+    line-break: inherit;
+  }
+  .rotated{
+    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg) !important;
+  }
+  .list-accordion-title-wrapper{
+    display: flex;
+    flex: 1;
+    padding-left: 8px;
+    span{
+      text-align: initial;
+      flex: initial;
+      color: #333333;
+    }
+    .form-details-title{
+      color: #999999;
+    }
+  }
+}
+.disable{
+  pointer-events: none;
+}
+//子表编辑页面
+.childern-form-editing {
+  .h3-accordion .list-accordion .accordion-content {
+    padding-right: 0;
+  }
+}

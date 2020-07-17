@@ -1,0 +1,63 @@
+<template>
+  <h3-list :hasHeader="true">
+    <template slot="header">Icon in the left</template>
+    <h3-list-item arrow="horizontal" :hasThumb="true">
+      <img src="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png" slot="thumb"></img>
+      My Cost Ratio
+    </h3-list-item>
+  </h3-list>
+  <h3-list :hasHeader="true">
+    <template slot="header" >Text Wrapping</template>
+    <h3-list-item>
+      Single line，long text will be hidden with ellipsis；
+    </h3-list-item>
+    <h3-list-item wrap align="top" :hasExtra="true">
+      Multiple line，long text will wrap；Long Text Long Text Long Text Long Text Long Text Long Text
+     <template slot="extra"> extra Content</template>
+    </h3-list-item>
+    <h3-list-item  arrow="empty" className="spe" hasExtra wrap>
+      Multiple line and long text will wrap. Long Text Long Text Long Text
+      <template slot="extra" >
+        no arrow
+      </template>
+    </h3-list-item>
+    <h3-list-item>
+      <select defaultValue="1">
+          <option value="1">Html select element</option>
+          <option value="2" disabled>Unable to select</option>
+          <option value="3">option 3</option>
+        </select>
+    </h3-list-item>
+  </h3-list>
+  <h3-list :hasHeader="true">
+    <template slot='header'>SubTitle</template>
+    <h3-list-item arrow="horizontal">
+      <template slot='extra'>extra content</template>
+      Title
+      <template slot="brief">SubTitle</template>
+    </h3-list-item>
+    <h3-list-item arrow="horizontal" :hasThumb="true" :hasExtra="true" multipleLine platform="android">
+      <img src="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png" slot="thumb"></img>
+      <template slot='extra'>extra content</template>
+      Title
+      <template slot="brief">subtitle</template>
+    </h3-list-item>
+    <h3-list-item arrow="horizontal" :hasExtra="true" multipleLine platform="android">
+      <template slot='extra'>extra content</template>
+      ListItem （Android）
+      <template slot="brief">There may have water ripple effect of <br /> material if you set the click event.</template>
+    </h3-list-item>
+  </h3-list>
+  <h3-list :hasHeader="true" >
+    <template slot="header" :hasExtra="true">Customized Right Side（Empty Content / Text / Image）</template>
+    <h3-list-item extra="10:30" align="top">
+      <img src="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png" slot="thumb"></img>
+      Title
+      <template slot="brief">subtitle</template>
+    </h3-list-item>
+    <h3-list-item :hasExtra="true">
+      toast
+      <h3-toast slot="extra" :show="show"> </h3-toast>
+    </h3-list-item>
+  </h3-list>
+</template>

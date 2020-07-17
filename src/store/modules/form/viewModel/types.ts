@@ -1,0 +1,26 @@
+// action types
+export enum ViewModelAction {
+  // INIT= 'init',
+  INPUT = 'input',
+  INPUTQUERY = 'inputquery',
+  DOACTION = 'doaction',
+  DOVALIDATE = 'dovalidate',
+  CLEARVALID = 'clearvalid',
+  GETFORMSTATE = 'getformstate',
+  DELFILE = 'delfile',
+  // DESTROY= 'destroy',
+  ADDROW = 'addrow',
+  COPYROW = 'copyrow',
+  DELETEROW = 'deleterow',
+  DELFILES = 'delfiles',
+  QUERYFILTER = 'queryfilter',
+  TRIGGERCLICK = 'triggerclick',
+  DOAFTERSUBMIT = 'doaftersubmit',
+  ADDUPLOADINGFILE = 'adduploadingfile',
+  POPUPLOADEDFILE = 'popuploadedfile',
+  SETDEFAULTITEMS = 'setdefaultitems',
+  ISHOWFORMCB = 'ishowformcb',
+  SHOWVALIDMSG = 'showvalidmsg',
+  CHANGISUPLOADINGSTATUS = 'changisuploadingstatus',
+  FRONTEVENTS = 'frontevents', // 表单下的所有前端事件
+}

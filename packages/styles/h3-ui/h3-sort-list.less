@@ -1,0 +1,44 @@
+.h3-sort-list{
+  .h3-sort{
+    &-item{
+      padding-left: 15 * @hd;
+      background: #fff;
+    }
+
+    &-flex{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1 * @hd solid #eee;
+    }
+
+    &-content{
+      color: #000;
+      font-size: 13 * @hd;
+      flex: 1;
+      text-align: left;
+      width: auto;
+      overflow: hidden;
+      padding-top: 15 * @hd;
+      padding-bottom: 15 * @hd;
+    }
+
+    &-handle{
+      font-size: @font-size-heading;
+      padding: 10 * @hd 15 * @hd;
+      color: #999;
+    }
+
+    &-touching{
+      position: relative;
+      z-index:2000;
+      box-shadow: 0 2 * @hd 11 * @hd 0 rgba(90,121,143,0.2);
+      border: none;
+    }
+
+    &-transition{
+      will-change: transform;
+      transition:transform 400ms;
+    }
+  }
+}

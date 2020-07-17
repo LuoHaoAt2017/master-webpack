@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="121px" height="121px" viewBox="0 0 121 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="43.5" cy="43.5" r="43.5"></circle>
+        <filter x="-32.8%" y="-25.9%" width="165.5%" height="165.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.125490196   0 0 0 0 0.811764706   0 0 0 0 0.188235294  0 0 0 0.274711277 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="移动端-定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06-移动端应用-copy-4" transform="translate(-315.000000, -487.000000)">
+            <g id="Group-11" transform="translate(129.000000, 498.000000)">
+                <g id="Group-10">
+                    <g id="Group-8">
+                        <g id="Group-7">
+                            <g id="Group-3" transform="translate(203.000000, 0.000000)">
+                                <g id="Group-9">
+                                    <g id="Oval">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                        <use fill="#38D246" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                    </g>
+                                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="translate(43.555559, 43.005816) rotate(4.000000) translate(-43.555559, -43.005816) " points="28 43.1385165 42.1327941 54.0116316 59.1111177 32"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

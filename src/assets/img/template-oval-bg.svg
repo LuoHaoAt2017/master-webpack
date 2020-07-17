@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="650px" height="212px" viewBox="0 0 650 212" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="650" height="212" rx="12"></rect>
+        <linearGradient x1="117.729416%" y1="3.38251853%" x2="27.2331269%" y2="86.3478954%" id="linearGradient-3">
+            <stop stop-color="#00B7FF" offset="0%"></stop>
+            <stop stop-color="#0080FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="移动端-定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06-移动端应用-copy-11" transform="translate(-50.000000, -1026.000000)">
+            <g id="Group" transform="translate(0.000000, 616.000000)">
+                <g id="Group-6" transform="translate(50.000000, 410.000000)">
+                    <g id="Oval">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#107FFF" xlink:href="#path-1"></use>
+                        <ellipse fill="url(#linearGradient-3)" opacity="0.421595982" mask="url(#mask-2)" cx="362.5" cy="228" rx="290.5" ry="269"></ellipse>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="36px" viewBox="0 0 44 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>folder-fill copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="移动端-定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="08移动端-列表详情-copy" transform="translate(-31.000000, -187.000000)">
+            <g id="Rectangle-Copy-2" transform="translate(1.000000, 150.000000)">
+                <g id="folder-fill-copy" transform="translate(24.000000, 27.000000)">
+                    <g>
+                        <rect id="Rectangle" fill="#000000" opacity="0" x="0" y="0" width="56" height="56"></rect>
+                        <path d="M48.125,16.31875 L28.4921875,16.31875 L22.0773437,10.1828125 C21.9953125,10.10625 21.8859375,10.0625 21.7765625,10.0625 L7.875,10.0625 C6.90703125,10.0625 6.125,10.8445313 6.125,11.8125 L6.125,44.1875 C6.125,45.1554688 6.90703125,45.9375 7.875,45.9375 L48.125,45.9375 C49.0929688,45.9375 49.875,45.1554688 49.875,44.1875 L49.875,18.06875 C49.875,17.1007812 49.0929688,16.31875 48.125,16.31875 Z" id="Path" fill="#C4CAD9"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

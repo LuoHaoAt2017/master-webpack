@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="74.5694746%" y1="4.95082939%" x2="22.773022%" y2="94.0256894%" id="linearGradient-1">
+            <stop stop-color="#4597FC" offset="0%"></stop>
+            <stop stop-color="#107FF0" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="55" cy="55" r="55"></circle>
+        <filter x="-38.2%" y="-32.7%" width="176.4%" height="176.4%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="13" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0582480309   0 0 0 0 0.365870444   0 0 0 0 0.82379358  0 0 0 0.333361639 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="20-手写签名" transform="translate(-575.000000, -1040.000000)">
+            <g id="Group-6" transform="translate(600.000000, 1059.000000)">
+                <g id="Oval">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <g id="Group-5" transform="translate(37.000000, 20.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+                    <g id="Group-4" transform="translate(20.317726, 0.000000)">
+                        <polyline id="Path" transform="translate(5.041948, 7.148569) rotate(-72.000000) translate(-5.041948, -7.148569) " points="-0.604382053 10.3474406 5.00740772 3.89335173 5.00740772 3.89335173 10.6882789 10.4037855"></polyline>
+                        <path d="M32.5083612,35.4626866 C32.5083612,20.3284358 20.1370455,8.05970149 4.87625418,8.05970149" id="Path"></path>
+                    </g>
+                    <rect id="Rectangle" x="0" y="26.5970149" width="32.5083612" height="27.4029851"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

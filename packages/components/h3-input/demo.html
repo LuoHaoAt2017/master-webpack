@@ -1,0 +1,15 @@
+<h3-list>
+  <h3-input title="金额" moneyKeyboardAlign="right" v-model="inputValue" placeholder="请输入金额" :clear="true" type="money"></h3-input> 
+  <h3-input title="金额2" moneyKeyboardAlign="left" placeholder="请输入金额2" type="money"></h3-input> 
+  <h3-input title="文本框" :clear="true" defaultValue="123456" v-model="inputValue" placeholder="请输入文本" type="text"></h3-input>
+  <h3-input title="telphone" :clear="true" placeholder="137 9448 9532" type="tel"></h3-input>
+  <h3-input title="标题超过默认5个长度" :clear="true" placeholder="标题超过默认5个长度" type="text"></h3-input>
+  <h3-input title="错误验证提示" :clear="true" placeholder="错误验证提示" :error="true" type="text"></h3-input>
+  <h3-input title="价格" :clear="true" placeholder="0.00" :hasExtra="true"  type="text">
+    <template slot="extra">￥</template>
+  </h3-input>
+  <h3-input title="<span>HTML</span>标题" :clear="true" placeholder="HTML标题" type="text"></h3-input>
+  <h3-input title="密码框" :clear="true"  type="password"></h3-input>
+  <h3-input title="Disabled" :clear="true" placeholder="Disabled" :disabled="true"  type="text"></h3-input>
+  <h3-input title="Not Editable" :clear="true" :labelNumber="5"  placeholder="Not editabled" :editable="false"  type="text"></h3-input>
+</h3-list>

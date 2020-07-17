@@ -1,112 +1,124 @@
 const path = require('path');
-const glob = require('glob');
+const webpack = require('webpack');
+const env = require('./build/config');
+const {VueLoaderPlugin} = require('vue-loader');
+const tsImportPluginFactory = require('ts-import-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// 将未用到的css进行清除(css的Tree-Shaking)
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const VConsoleWebpackPlugin = require('vconsole-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
-const smp = new SpeedMeasurePlugin();
+const measure = new SpeedMeasurePlugin();
 
-function resolve(param) {
-    return path.resolve(__dirname, param);
+function resolve(name) {
+    return path.resolve(__dirname, name);
 }
 
-module.exports = smp.wrap({
-    watch: true, // 开启监听模式，文件发生变化，重新编译，webpack-dev-server 默认开启监听模式。
-    watchOptions: {
-        // 不监听的文件或者文件夹
-        ignored: /node_modules/,
-        // 监听到变化发生后会等300ms再去执行，默认300ms
-        aggregateTimeout: 300,
-        // 判断文件是否发生变化是通过不停询问系统指定文件有没有变化实现的，默认每秒问1000次
-        poll: 1000
-    },
-    entry: {
-        main: resolve('src/main.js')
-    },
+module.exports = measure.wrap({
+    mode: 'development',
+    entry: resolve("src/main.ts"),
     output: {
-        filename: 'js/[name].bundle.js',
-        path: resolve('dist')
+        filename: "[name].bundle.js",
+        path: resolve("dist")
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /.vue$/,
+                use: ['vue-loader'],
+            },
+            {
+                test: /.js$/,
                 use: ['thread-loader', 'babel-loader'],
-                include: path.resolve(__dirname, 'src')
-            },
-            {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name][hash:8].[ext]',
-                            outputPath: 'images/'
-                        }
-                    }
-                ],
-                exclude: path.resolve(__dirname, 'node_modules'),
-            },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name][hash:8].[ext]',
-                            outputPath: 'fonts/'
-                        }
-                    }
+                include: [
+                    resolve('src'),
+                    resolve('packages'),
+                    resolve('node_modules/h3-template-detail/packages'),
+                    resolve('node_modules/h3yun-formlogic'),
+                    resolve('node_modules/h3-mobile-vue/src'),
+                    resolve('node_modules/@h3/report'),
+                    resolve('node_modules/@h3/thinking-ui')
                 ]
             },
             {
-                test: /\.md$/,
-                use: "raw-loader"
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                options: {
+                    allowTsInNodeModules: true,
+                    transpileOnly: true,
+                    getCustomTransformers: () => ({
+                        before: [ tsImportPluginFactory([
+                            {
+                                libraryName: '@h3/report',
+                                libraryDirectory: 'lib',
+                                style: false,
+                            },
+                            {
+                                libraryName: '@h3/thinking-ui',
+                                libraryDirectory: 'lib',
+                                style: true,
+                            },
+                        ]) ]
+                    }),
+                    compilerOptions: {
+                        module: 'es2015'
+                    }
+                },
             },
+            {
+                test: /.(less|css)$/,
+                use: ['css-loader', {
+                    loader: 'less-loader',
+                    options: {
+                        javascriptEnabled: true
+                    }
+                }]
+            },
+            {
+                test: /.(png|jpg|svg|jpeg|gif)$/,
+                use: ['file-loader'],
+                include: [
+                    resolve('src'),
+                    resolve('packages'),
+                    resolve('node_modules/photoswipe'),
+                    resolve('node_modules/h3-mobile-vue'),
+                    resolve('node_modules/@h3/report'),
+                    resolve('node_modules/@h3/thinking-ui/node_modules/@h3/theme-mobile')
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: ['file-loader']
+            }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './public/index.html'),
-            filename: 'index.html',
-            hash: true
-        }),
-        new CleanWebpackPlugin(),
-        new PurgecssPlugin({
-            paths: glob.sync(`${resolve('src')}/**/*`, { nodir: true })
-        })
-    ],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, 'src')
-        }
-    },
-    optimization: {
-        minimizer: [
-            new UglifyWebpackPlugin({
-                test: /\.js$/,
-                parallel: true, // 并行构建，加快构建，缩短时间。
-                include: resolve('src')
-            })
-        ],
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    name: "vendor", //第三方库
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: "all",
-                    priority: 10 // 优先级
-                },
-                common: {
-                    name: "common", //公共代码
-                    test: /[\\/]src[\\/]/,
-                    minSize: 1024,
-                    chunks: "all",
-                    priority: 5
-                }
-            }
+            '@': resolve('src'),
+            'src': resolve('src'),
+            'vue$': 'vue/dist/vue.common.js',
+            'packages': resolve('packages'),
+            'jquery': 'jquery'
         },
-    }
+        extensions: ['.ts', '.js', '.vue']
+    },
+    plugins: [
+        new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            template: resolve('public/index.html')
+        }),
+        new CleanWebpackPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.H3_ENV': JSON.stringify(process.env.H3_ENV),
+            'process.env.PUBLIC_PATH': JSON.stringify(env.assetsPublicPath),
+            'process.env.ASSETS_DIR': JSON.stringify(env.assetsSubDirectory),
+            'process.env.RESOURCE_URL': JSON.stringify(process.env.H3_ENV === 'release' ? env.resourceUrl : env.resourceTestUrl), // eslint-disable-line
+        }),
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+        }),
+        new VConsoleWebpackPlugin({
+            enable: process.env.H3_ENV === 'stage',
+        })
+    ]
 });

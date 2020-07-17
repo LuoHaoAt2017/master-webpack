@@ -1,0 +1,225 @@
+.overflow-ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top-line(){
+  .hairline('bottom', #e4e4e4);
+}
+
+.h3-card-form-main{
+  .title-status{
+    display: flex;
+    height: 25px;
+    align-items: center;
+  }
+  .main-title{
+    .px2rem(height,50);
+    .px2rem(line-height,50);
+    .px2rem(font-size,32);
+    // .px2rem(margin-bottom,8);
+    color: #333333;
+    .overflow-ellipsis;
+    .high-light{
+      color:#1890FF;
+      .px2rem(font-size,26);
+    }
+  }
+  .main-summary{
+    .px2rem(height,34);
+    .px2rem(font-size,26);
+    .px2rem(margin-top,8);
+    color: #999999;
+    .overflow-ellipsis;
+  }
+  .has-aside{
+    .px2rem(width,506);
+  }
+  .has-aside-status{
+    .px2rem(max-width,410);
+    .px2rem(margin-right,16);
+  }
+  .without-summary{
+    .px2rem(margin-bottom,0);
+  }
+  .h3-status-tip{
+    // .px2rem(margin-top,4);
+  }
+}
+.search-bar {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  background: #fff;
+  .px2rem(padding-left, 30);
+  .top-line;
+  .searchBarWarpper {
+    flex: 1;
+    .px2rem(margin-right,30);
+    form {
+      padding: 0;
+    }
+  }
+  .search-bar-wrapper-copy{
+    .px2rem(width, 502);
+    form {
+      padding: 0;
+    }
+  }
+  .filter {
+    color: #666;
+    .px2rem(height, 88);
+    .px2rem(line-height, 88);
+    .px2rem(margin-right, 30);    
+    .px2rem(font-size, 32);
+    &:before {
+      content: '';
+    }
+  }
+  .cancel {
+    height: 44px;
+    line-height: 44px;
+    .px2rem(margin-right, 30);    
+    .px2rem(font-size, 32);
+    color: #1890FF;
+  }
+}
+.h3-swipeout{
+  .px2rem(padding-bottom, 100);
+}
+.h3-swipeout-button{
+  .px2rem(width,120);
+}
+.highlight {
+  color:#1890FF;
+  .px2rem(font-size,26);
+}
+.h3-action-group-content-border-top{
+  width: 500%;
+  height: 1px;
+  .hairline('top', #e4e4e4);
+}
+// .h3-modal-scroll-exception{
+//   display: inline-block;
+// }
+// .slot-wrapper{
+//   width: 100%;
+//   overflow-x: auto;
+// }
+.h3-action-group-button{
+  position: relative;
+  color: #666;
+  .px2rem(font-size, 34);
+  justify-content: space-between;
+}
+.h3-action-group-button-white-space{
+  width: 100%;
+  .px2rem(height, 13);
+  background: #f8f8f8;
+}
+.h3-action-group-header-wrapper{
+  display: flex;
+  align-items: center;
+  .px2rem(height, 42);
+  .px2rem(line-height, 42);
+  .h3-action-group-header-title{
+    .px2rem(font-size, 30);
+    .px2rem(height, 42);
+    .px2rem(line-height, 42);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    .px2rem(margin-right, 16);
+  }
+  .h3-action-group-header-title-status-tip{
+    .px2rem(max-width, 650);
+  }
+  .h3-status-tip-action{
+    .px2rem(margin-left, 30);
+  }
+}
+
+
+
+.h3-action-button{
+  color: #333;
+  .px2rem(font-size, 34);
+  width: 100%;
+  .px2rem(height, 100);
+  background: #fff;
+  .hairline('top', #e4e4e4);
+  // .px2rem(border-top-width, 1);
+  // border-top-style: solid;
+  // border-top-color: #e4e4e4;
+  text-align: center;
+  .px2rem(line-height, 100);
+}
+.h3-batch-setting-top{
+  .top-line;
+}
+
+.mescroll{
+  position: fixed;
+  .px2rem(top, 88);
+  bottom: 0;
+  height: auto;
+  z-index: 2;
+  width: 100%;
+}
+.mescroll.has-calendar {
+  .px2rem(top, 268);
+}
+.mescroll.has-calendar-expand {
+  .px2rem(top, 760);
+}
+.h3-data-list-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.h3-remark-toast{
+  .h3-toast-mask{
+    .px2rem(width, 240);
+    .px2rem(height, 240);
+    opacity: 0.8;
+    background: #323334;
+    .px2rem(border-radius, 20);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .h3-toast-notice{
+      // .px2rem(width, 240);
+      // .px2rem(height, 240);
+    }
+    .h3-toast-notice-content .h3-toast-text{
+      background: transparent;
+    }
+    .h3-toast-notice-content .h3-toast-text.h3-toast-text-icon{
+      padding: 0;
+    }
+    .h3-toast-notice-content{
+      padding: 0;
+      .h3-icon{
+        .px2rem(font-size, 89);
+        // position: absolute;
+        // .px2rem(top, 31.5);
+        // .px2rem(right, 76.5);
+      }
+      .h3-toast-text-info{
+        .px2rem(font-size, 30);
+        .px2rem(line-height, 42);
+        color: #fff;
+        .px2rem(margin-top, 34);
+      }
+    }
+  }
+}
+.datalist-item-selected{
+  .h3-card-form{
+    background: #e6f7ff !important;
+  }
+}

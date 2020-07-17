@@ -1,0 +1,148 @@
+@import '../../../../../packages/styles/mixins';
+.overflow-ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mistake-color: #FFF5F5;
+@font-color-blue: #1890FF;
+textarea{
+    .px2rem(text-indent, -1)!important;
+}
+textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    .px2rem(text-indent, -1)!important;
+}
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    .px2rem(text-indent, -1)!important;
+}
+textarea:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    .px2rem(text-indent, -1)!important;
+}
+.cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65.6%;
+  height: 100%;
+  opacity: 0;
+}
+.require {
+  color: red;
+}
+.subform-container {
+  -ms-overflow-style:none;
+  overflow:-moz-scrollbars-none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  background: #FFFFFF;
+  // position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  
+  //避免代码打包后样式作用在其他页面,此样式写在特定的类下面
+  .form-footer-btn{
+    position: absolute;
+    z-index: 99;
+    right: 0px;
+    bottom: 0px;
+    height: 45px;
+    width: 100%;
+    // width: calc(~'100% - 45px');
+    background-color: white;
+    display: flex;
+    justify-content: space-around
+  }
+}
+.subform-container::-webkit-scrollbar{
+  width: 0;
+  display: none;
+}
+
+.datetime-right-icon {
+  width: 52px;
+  .px2rem(height, 90);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.datetime-icon {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  color: #c7c7c7;
+}
+.h3-list-body{
+  padding-bottom: 10px;
+}
+.main-content{
+  height: calc(~'100% - 45px');
+  overflow-y: scroll;
+  .px2rem(margin-bottom,100);
+  .has-mistake{
+    box-shadow: -15px 0 0 0 @mistake-color;
+    background-color: @mistake-color !important;
+  }
+  .h3-list-item{
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  .h3-list-content{
+    padding: 0 !important;
+  }
+  .h3-input-view .h3-input-label{
+    color: #333333 !important;
+  }
+  .h3-multiuser{
+    .h3-list-body{
+      background-color: rgba(0, 0, 0, 0) !important;
+      .px2rem(margin-left,30);
+    }
+    .h3-list-item{
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+  .switch-content{
+    .px2rem(margin-left,30);
+    .px2rem(padding-right,30);
+    .px2rem(height,90);
+    .px2rem(font-size,34);
+    position: relative;
+    .hairline('bottom',#eeeeee);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .h3-field-layout-h-label{
+    .px2rem(width, 234);
+  }
+}
+.form-footer-btn{
+  a {
+    border: none; // background-color: white;
+    color: @font-color-blue;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a:after {
+    content: ''; // top: .34rem;
+    .px2rem(top, 34);
+    bottom: 0;
+    position: absolute;
+    width: 1px; // height: .3rem;
+    .px2rem(height, 30);
+    background-color: #d9d9d9;
+    right: 0;
+  }
+  a:last-child:after {
+    width: 0;
+  }
+}

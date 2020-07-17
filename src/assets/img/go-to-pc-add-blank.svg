@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="125px" height="98px" viewBox="0 0 125 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>新建空白应用</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="16.1920054%" id="linearGradient-1">
+            <stop stop-color="#97BEFF" offset="0%"></stop>
+            <stop stop-color="#B4D0FF" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="1.44663462 0 30.3793269 0 31.8259615 11.7962963 0 11.7962963"></polygon>
+        <rect id="path-4" x="0" y="40" width="33" height="58" rx="7"></rect>
+        <filter x="-7.6%" y="-4.3%" width="130.3%" height="108.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="5" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.356862745   0 0 0 0 0.588235294   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="移动端-定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06-移动端应用-copy-2" transform="translate(-82.000000, -837.000000)">
+            <g id="Group" transform="translate(0.000000, 616.000000)">
+                <g id="新建空白应用" transform="translate(82.000000, 221.000000)">
+                    <g id="电脑" transform="translate(7.000000, 0.000000)">
+                        <g id="底">
+                            <rect id="Rectangle" fill="#5B96FF" x="3.63076923" y="0.0773456586" width="113.620645" height="80.6819136" rx="4"></rect>
+                            <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="2.50126581" width="113.620645" height="78.2579934" rx="4"></rect>
+                            <path d="M6,6.82697504 L31.2215371,6.82697504 L31.2215371,80.7592593 L4,80.7592593 C1.790861,80.7592593 2.705415e-16,78.9683983 0,76.7592593 L0,12.826975 C-4.05812251e-16,9.51326654 2.6862915,6.82697504 6,6.82697504 Z" id="Rectangle" fill="#CDE0FF"></path>
+                            <path d="M6,0 L107.620645,8.8817842e-16 C110.934354,9.10895318e-15 113.620645,2.6862915 113.620645,6 L113.620645,13.739628 L0,13.739628 L0,6 C-4.05812251e-16,2.6862915 2.6862915,1.4968968e-15 6,8.8817842e-16 Z" id="Rectangle" fill="#5B96FF"></path>
+                            <path d="M41.2834173,23.8882714 L64.2904402,23.8882714 C67.5365217,23.8882714 70.1679907,26.5197404 70.1679907,29.7658219 L70.1679907,29.7658219 C70.1679907,33.0119034 67.5365217,35.6433723 64.2904402,35.6433723 L41.2834173,35.6433723 C38.0373358,35.6433723 35.4058669,33.0119034 35.4058669,29.7658219 L35.4058669,29.7658219 C35.4058669,26.5197404 38.0373358,23.8882714 41.2834173,23.8882714 Z" id="Rectangle" fill="#5B96FF"></path>
+                            <rect id="Rectangle" fill="#CDE0FF" x="74.0304489" y="23.8882714" width="34.7621238" height="11.7551009" rx="5.87755046"></rect>
+                            <rect id="Rectangle" fill="#CDE0FF" x="35.4058669" y="40.2307288" width="34.7621238" height="11.7551009" rx="5.87755046"></rect>
+                            <rect id="Rectangle" fill="#CDE0FF" x="74.0304489" y="40.2307288" width="34.7621238" height="11.7551009" rx="5.87755046"></rect>
+                            <rect id="Rectangle" fill="#CDE0FF" x="35.4058669" y="56.859896" width="34.7621238" height="11.7551009" rx="5.87755046"></rect>
+                            <rect id="Rectangle" fill="#CDE0FF" x="74.0304489" y="56.859896" width="34.7621238" height="11.7551009" rx="5.87755046"></rect>
+                            <g id="Group-3" transform="translate(5.446154, 5.444444)" fill="#D5E5FF">
+                                <ellipse id="Oval" cx="1.62625084" cy="1.57139956" rx="1.62625084" ry="1.57139956"></ellipse>
+                                <ellipse id="Oval-Copy" cx="8.1312542" cy="1.57139956" rx="1.62625084" ry="1.57139956"></ellipse>
+                                <ellipse id="Oval-Copy-2" cx="14.6362576" cy="1.57139956" rx="1.62625084" ry="1.57139956"></ellipse>
+                            </g>
+                        </g>
+                        <g id="Rectangle" transform="translate(42.661538, 80.759259)">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <use id="Mask" fill="#99BFFF" xlink:href="#path-2"></use>
+                            <rect fill="#5B96FF" opacity="0.484747024" mask="url(#mask-3)" x="-2.72307692" y="0" width="33.5846154" height="7.25925926"></rect>
+                        </g>
+                        <rect id="Rectangle" fill="#5B96FF" x="35.4" y="92.5555556" width="46.2923077" height="5.44444444" rx="2.72222222"></rect>
+                    </g>
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                    <rect id="Rectangle" fill="#FFFFFF" x="2" y="46" width="29" height="46" rx="2"></rect>
+                    <rect id="Rectangle" fill="#C1A4FF" x="4" y="55" width="23" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#FFD766" x="4" y="65" width="23" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-3" fill="#B0CEFF" x="4" y="75" width="23" height="5" rx="2.5"></rect>
+                    <rect id="Rectangle-Copy-6" fill="#FFFFFF" x="37" y="21" width="36" height="12" rx="4"></rect>
+                    <ellipse id="Oval" fill="#00DEAC" opacity="0.600000024" cx="42.5" cy="27" rx="3.5" ry="3"></ellipse>
+                    <rect id="Rectangle" fill="#00DEAC" opacity="0.600000024" x="49" y="24" width="19" height="6" rx="3"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

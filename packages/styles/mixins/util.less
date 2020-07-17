@@ -1,0 +1,85 @@
+
+// Encoded SVG Background
+@baseFontSize: 75px;
+
+.encoded-svg-background-i(@svg) {
+  @url: `encodeURIComponent(@{svg}) `;
+
+  background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+}
+
+.ellipsis() {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.background(@start: #ffffff, @end: #000000) {
+  background: @end;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); /* Saf4+, Chrome */
+  background-image: linear-gradient(@start, @end);
+}
+
+.setTapColor(@c:rgba(0,0,0,0)) {
+  -webkit-tap-highlight-color: @c;
+}
+
+.setTopLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid @c;
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.setBottomLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid @c;
+  color: @c;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+
+.setLeftLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid @c;
+  color: @c;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+
+.setRightLine(@c: #C7C7C7) {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid @c;
+  color: @c;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+
+.px2rem(@name,@px) {
+  @{name}: @px/@baseFontSize * 1rem;
+}
+.px2remimp(@name,@px) {
+  @{name}: @px/@baseFontSize * 1rem !important;
+}

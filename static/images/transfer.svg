@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>转交</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="09-流程-日志" transform="translate(-32.000000, -1042.000000)">
+            <g id="转交" transform="translate(33.000000, 1043.000000)">
+                <g id="Group-Copy-4" fill="#51D1B3" stroke="#FFFFFF" stroke-width="2">
+                    <circle id="Oval" cx="18" cy="18" r="18"></circle>
+                </g>
+                <path d="M11,14 C9.8954305,14 9,13.1045695 9,12 C9,10.8954305 9.8954305,10 11,10 L15,10 C22.1797017,10 28,15.8202983 28,23 C28,24.1045695 27.1045695,25 26,25 C24.8954305,25 24,24.1045695 24,23 C24,18.0294373 19.9705627,14 15,14 L11,14 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero" transform="translate(18.500000, 17.500000) scale(-1, -1) translate(-18.500000, -17.500000) "></path>
+                <path d="M27.4142136,25.5857864 C28.1952621,26.366835 28.1952621,27.633165 27.4142136,28.4142136 C26.633165,29.1952621 25.366835,29.1952621 24.5857864,28.4142136 L20.5857864,24.4142136 C19.8047379,23.633165 19.8047379,22.366835 20.5857864,21.5857864 L24.5857864,17.5857864 C25.366835,16.8047379 26.633165,16.8047379 27.4142136,17.5857864 C28.1952621,18.366835 28.1952621,19.633165 27.4142136,20.4142136 L24.8284271,23 L27.4142136,25.5857864 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero" transform="translate(24.000000, 23.000000) scale(-1, -1) translate(-24.000000, -23.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

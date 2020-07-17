@@ -1,0 +1,119 @@
+@import '../index.less';
+@h3ActionSheetAndroidBorderRadius: 2px;
+
+.h3ui-actionsheet {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    // transform: translate(0, 0);
+    backface-visibility: hidden;
+    z-index: 5000;
+    width: 100%;
+    background-color: @fill-base;
+    //slide up animation
+    // transition: transform .3s ease;
+}
+.h3ui-actionsheet__title, 
+.h3ui-actionsheet__message {
+  margin: 15px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+.h3ui-actionsheet__message {
+  color: #888;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.h3ui-actionsheet__menu{
+    background-color: #FFFFFF;
+}
+.h3ui-actionsheet__action {
+    position: relative;
+    margin-top: 6px;
+    background-color: #FFFFFF;
+}
+.h3ui-actionsheet__cell {
+    position: relative;
+    // padding: 12px 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    // font-size: 18px;
+    font-size: @actionsheet-item-font-size;
+    .hairline('top', @border-color-base);
+    &:active{
+        background-color: @fill-tap;
+    }
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
+}
+
+
+//android actionSheet
+.h3ui-skin_android{
+    .h3ui-actionsheet {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        //padding: 0 40px;
+        width: 274px;
+        box-sizing: border-box;
+        backface-visibility: hidden;
+        background: transparent;
+        //slide up animation
+        transition: transform .3s;
+    }
+    .h3ui-actionsheet__action{
+        display: none;
+    }
+    .h3ui-actionsheet__menu {
+        border-radius: @h3ActionSheetAndroidBorderRadius;
+        box-shadow: 0 6px 30px 0 rgba(0,0,0,.1);
+    }
+    .h3ui-actionsheet__cell {
+        padding: 13px 24px;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: left;
+        &:first-child {
+            border-top-left-radius: @h3ActionSheetAndroidBorderRadius;
+            border-top-right-radius: @h3ActionSheetAndroidBorderRadius;
+        }
+        &:last-child {
+            border-bottom-left-radius: @h3ActionSheetAndroidBorderRadius;
+            border-bottom-right-radius: @h3ActionSheetAndroidBorderRadius;
+        }
+    }
+}
+
+//actionSheet aniamtion
+.h3ui-actionsheet_toggle{
+  transform: translate(0, 0);
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+}
+.h3ui-actionsheet-down{
+  transform: translate(0, 100%);
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+}
+
+.h3ui-actionsheet-cancel-button-mask {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #e7e7ed;
+  border-top: 1PX solid #ddd;
+  // border-bottom: 1PX solid #ddd;
+}

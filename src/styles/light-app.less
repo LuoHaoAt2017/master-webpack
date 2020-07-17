@@ -1,0 +1,15 @@
+
+@baseFontSize: 75;
+@lightAppPrimaryColor: #107ff0;
+@lightAppTextColor: #333;
+@lightAppLightTextColor: #999;
+.px2rem(@name,@px) {
+  @{name}: @px / @baseFontSize * 1rem;
+}
+.no-user-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

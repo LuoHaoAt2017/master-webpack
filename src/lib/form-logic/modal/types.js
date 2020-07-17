@@ -1,0 +1,17 @@
+export const Mutation = {
+  SET: 'set',
+  SETINGRID: 'setingrid',
+  SETVISIBLE: 'setvisible',
+  SETVISIBLEINGRID: 'setvisibleingrid',
+  VALID: 'valid',
+  VALIDINGRID: 'validingrid',
+  VALIDROW: 'validrow',
+  RESETDIRTY: 'resetdirty',
+  ADDROW: 'addrow',
+  COPYROW: 'copyrow',
+  DELETEROW: 'deleterow',
+  CLEARROWS: 'clearrows',
+  BATCHADDROWS: 'batchaddrows',
+  UPDATEROW: 'updaterow',
+  BINDCLICKEVT: 'bindclickevt',
+};

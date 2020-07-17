@@ -1,0 +1,22 @@
+<template>
+  <h3-list-item :hasExtra="true">
+    toast
+    <h3-toast slot="extra" :show="show"> </h3-toast>
+  </h3-list-item>
+</template>
+
+<script>
+  import h3Toast from '../h3-toast/';
+
+  export default {
+    name: 'HelloWorld',
+    components: {
+      h3Toast,
+    },
+    data() {
+      return {
+        show: false,
+      };
+    },
+  };
+</script>

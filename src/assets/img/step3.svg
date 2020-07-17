@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="102px" viewBox="0 0 101 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>氚云</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="50.5500099" cy="50.9072727" rx="50.1699346" ry="50.66"></ellipse>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-3">
+            <stop stop-color="#37ABFD" offset="0%"></stop>
+            <stop stop-color="#69C1FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="94.8154303%" y1="6.774892%" x2="24.474895%" y2="92.1625662%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0.671676857" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="新用户指引_移动" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04-安装完成-弹窗-copy" transform="translate(-196.000000, -749.000000)">
+            <g id="Group-4" transform="translate(156.000000, 484.000000)">
+                <g id="氚云" transform="translate(40.000000, 265.000000)">
+                    <g id="Group-12-Copy">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#EEF4F8" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <rect id="Rectangle" stroke="#FFFFFF" stroke-width="5" fill-opacity="0.63" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-2)" x="34.3673005" y="25.38" width="75.062431" height="96.142514" rx="2"></rect>
+                        <rect id="Rectangle-Copy-6" fill="#FFFFFF" fill-rule="nonzero" opacity="0.681454613" mask="url(#mask-2)" x="47.0026408" y="85.1923232" width="51.319615" height="7.27775533" rx="2"></rect>
+                        <rect id="Rectangle-Copy-2" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" x="47.0026408" y="66.5430752" width="21.8666186" height="11.3714927" rx="2"></rect>
+                        <path d="M82.5243074,28.2745627 C85.3578785,33.9597262 86.9607843,40.4302457 86.9607843,47.2945679 C86.9607843,69.9492883 69.5013527,88.3145679 47.9640523,88.3145679 C44.1454193,88.3145679 40.45498,87.737229 36.9673203,86.6610067 L36.9673203,30.2745679 C36.9673203,29.1699984 37.8627508,28.2745679 38.9673203,28.2745679 L82.52431,28.2745679 Z" id="Combined-Shape" fill-opacity="0.43" fill="#3287BD" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        <rect id="Rectangle-Copy-5" fill-opacity="0.63" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" x="47.0026408" y="47.8938272" width="21.8666186" height="11.3714927" rx="2"></rect>
+                        <rect id="Rectangle-Copy" fill-opacity="0.63" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" x="76.4556372" y="47.8938272" width="21.8666186" height="11.3714927" rx="2"></rect>
+                        <rect id="Rectangle-Copy-3" fill-opacity="0.82" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" x="76.4556372" y="66.5430752" width="21.8666186" height="11.3714927" rx="2"></rect>
+                    </g>
+                    <circle id="Oval-Copy" fill="#1890FF" fill-rule="nonzero" cx="46" cy="45" r="30"></circle>
+                    <path d="M54,44 L31,44 L31,40 L59,40 L59,42 L59.0768571,42 L59.0768571,51.5078623 C59.0768571,52.5243957 59.5388571,53.4673376 60.2305714,54.1207656 C60.9231429,54.8461677 61.9234286,55.2092731 63,55.2092731 L63,60 C60.5391429,60 58.308,59.0562494 56.6151429,57.5318537 C55.0002857,56.007458 54,53.830443 54,51.5078623 L54,44 Z M38,46 L38,55.2950602 C38,56.6669496 37.5831012,57.9615854 37,59.1051096 C36.3333333,60.2477848 35.3333333,61.2384995 34.1671309,62 L31,57.9615854 C31.4168988,57.6568154 31.8328691,57.2000849 32.0835655,56.7433544 C32.3333333,56.3621797 32.5004643,55.8290444 32.5004643,55.2950602 L32.5004643,46 L38,46 Z M60,32 L34.5642304,32 C33.2211314,32 31.9528336,31.7142857 30.8341385,31.1428571 C29.7154434,30.5714286 28.7455197,29.7142857 28,28.7146836 L31.9528336,26 C32.2512077,26.4289694 32.6991845,26.7138878 33.1463301,26.9996021 C33.5195055,27.2144847 34.0422835,27.2861122 34.5642304,27.2861122 L60,27.2861122 L60,32 Z M40,59 L40,47 L45,47 L45,59 L40,59 Z M48,59 L48,47 L53,47 L53,59 L48,59 Z M32,38 L32,34 L57,34 L57,38 L32,38 Z" id="Combined-Shape" fill="url(#linearGradient-4)" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

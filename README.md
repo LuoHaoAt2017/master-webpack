@@ -1,13 +1,52 @@
-# master-webpack
-webpack原理学习
 
-将编译后的文件打包到内存。这就是为什么在开发的过程中，
-你会发现dist目录没有打包后的代码，因为都在内存中。
-原因就在于访问内存中的代码比访问文件系统中的文件更快，而且也减少了代码写入文件的开销。
-当文件发生变化，就触发重新编译。同时还监听了每次编译结束的事件。
-当监听到一次webpack编译结束，通过websoket给浏览器发送通知，检查下是否需要热更新。
+## Webpack实践
 
-### react-router 页面刷新，页面404。
-将BrowserRouter改成HashRouter。
+``` bash
+# install dependencies
+npm install
 
-### 自己写一个webpack
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+## 优化开发体验
+- 优化构建速度
+- 优化用户体验
+
+### 优化输出质量
+- 减少首屏加载时间
+- 提升流程度
+
+### 优化构建速度
+- 缩小文件搜索范围
+
+- 使用DllPlugin
+
+- 使用HappyPack
+
+- 使用ParallelUglifyPlugin
+
+- 压缩代码
+
+### 优化用户体验
+- 使用自动刷新
+
+- 开启模块热替换
+
+- 使用TreeShaking
+
+- 区分环境
+
+- CDN加速
+
+- 提取公共代码
+
+- 分割代码以按需加载
+
+- 输出分析

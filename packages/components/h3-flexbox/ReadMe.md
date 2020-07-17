@@ -1,0 +1,113 @@
+<table>
+  <tr>
+    <td>category</td>
+    <td>type</td>
+    <td>title</td>
+    <td>subtitle</td>
+  </tr>
+  <tr>
+    <td>components</td>
+    <td>layout</td>
+    <td>flexbox</td>
+    <td>flex布局</td>
+  </tr>
+</table>
+
+<strong>Flexbox是flex布局的封装</strong>
+
+<strong>API</strong>
+
+<strong>flexbox</strong>
+
+<table>
+  <tr>
+    <th>属性</th>
+    <th>说明</th>
+    <th>类型</th>
+    <th>默认值</th>
+  </tr>
+  <tr>
+    <td>
+      direction
+    </td>
+    <td>
+      项目定位方向，值可以为 row,row-reverse,column,column-reverse, 
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      row
+    </td>
+  </tr>
+   <tr>
+    <td>
+      wrap
+    </td>
+    <td>
+      子元素的换行方式，可选nowrap,wrap,wrap-reverse 
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      nowrap
+    </td>
+  </tr>
+  <tr>
+    <td>
+      justify
+    </td>
+    <td>
+      子元素在主轴上的对齐方式，可选start,end,center,between,around 
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      center
+    </td>
+  </tr>
+  <tr>
+    <td>
+      align
+    </td>
+    <td>
+      子元素在交叉轴上的对齐方式，可选start,center,end,baseline,stretch 
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      center
+    </td>
+  </tr>
+  <tr>
+    <td>
+      orient
+    </td>
+    <td>
+     排布方向，可选['horizontal', 'vertical'] 
+    </td>
+    <td>
+      String
+    </td>
+    <td>
+      horizontal	
+    </td>
+  </tr>
+  <tr>
+    <td>
+      gutter
+    </td>
+    <td>
+     间隙像素大小（px）
+    </td>
+    <td>
+      Number
+    </td>
+    <td>
+      8	
+    </td>
+  </tr>
+</table>

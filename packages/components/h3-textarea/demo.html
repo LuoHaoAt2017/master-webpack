@@ -1,0 +1,35 @@
+<template>
+  <h3-list :hasHeader="true">
+    <div slot="header" style="text-align:left;">Count</div>
+    <h3-textarea :count="100" :rows="5" defaultValue="我的意见是...." :maxLength="100" :autoHeight="true">
+    </h3-textarea>
+  </h3-list>
+  <h3-list>
+    <h3-textarea title="Normal Textarea" :rows="1" v-model="textareaValue" :autoHeight="true" :clear="true"></h3-textarea>
+    <h3-textarea title="disabled Textarea" :rows="1" v-model="textareaValue" :disabled="true"></h3-textarea>
+    <h3-textarea title="not editable Textarea" :rows="1" v-model="textareaValue" :editable="false"></h3-textarea>
+    <h3-textarea title="" :rows="3" placeholder="fixed row lines">
+    </h3-textarea>
+    <h3-textarea title=" ">
+      <template slot="title">
+        hdshsssss
+      </template>
+    </h3-textarea>
+  </h3-list>
+</template>
+
+<script>
+  import h3Textarea from '../h3-textarea/';
+
+  export default {
+    name: 'textareaDemo',
+    components: {
+      h3Textarea,
+    },
+    data() {
+      return {
+        textareaValue: 'defaultValue',
+      };
+    },
+  };
+</script>

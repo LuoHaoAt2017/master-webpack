@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="271px" height="269px" viewBox="0 0 271 269" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="100.5" cy="100.5" r="100.5"></circle>
+        <filter x="-28.1%" y="-21.1%" width="156.2%" height="156.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="6" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="14" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.248661058   0 0 0 0 0.416533801  0 0 0 0.170261549 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-3" points="0.0002 0.655 120.345 0.655 120.345 63.773 0.0002 63.773"></polygon>
+        <polygon id="path-5" points="0 122 121 122 121 1 0 1"></polygon>
+    </defs>
+    <g id="定稿" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-0422-新建空白页面" transform="translate(-18.000000, -1058.000000)">
+            <g id="Group-4" transform="translate(53.000000, 1078.000000)">
+                <g id="Oval-Copy">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#FFFFFF" stroke-width="12" fill="#107FF0" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-6" transform="translate(40.000000, 41.000000)">
+                    <g id="Group-3">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <path d="M108.0452,13.084 C108.0452,16.45 106.6862,19.493 104.4202,21.759 C102.2192,23.96 99.1762,25.319 95.8102,25.319 L24.4702,25.319 C21.1042,25.319 18.0622,23.96 15.8602,21.759 C13.6592,19.493 12.3002,16.45 12.3002,13.084 L21.2982,13.084 C21.2982,13.99 21.6222,14.768 22.2042,15.351 C22.7872,15.933 23.6292,16.321 24.4702,16.321 L95.8102,16.321 C96.7162,16.321 97.4932,15.933 98.0752,15.351 C98.6582,14.768 99.0472,13.99 99.0472,13.084 L108.0452,13.084 Z M27.1902,42.475 L93.1562,42.475 L93.1562,33.541 L27.1902,33.541 L27.1902,42.475 Z M0.0002,0.655 L120.3452,0.655 L120.3452,63.773 C111.8642,59.889 102.9952,56.846 93.8032,54.646 C82.9922,52.056 71.7282,50.696 60.1402,50.696 C48.5522,50.696 37.2882,52.056 26.4772,54.646 C17.2842,56.846 8.4152,59.889 0.0002,63.773 L0.0002,0.655 Z" id="Fill-1" fill="#FFFDFD" mask="url(#mask-4)"></path>
+                    </g>
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="Clip-5"></g>
+                    <path d="M55.9760106,108.632043 L65.0239894,108.632043 L65.0239894,72.1739308 L55.9760106,72.1739308 L55.9760106,108.632043 Z M27.3369812,108.632043 L36.3196061,108.632043 L36.3196061,72.1739308 L27.3369812,72.1739308 L27.3369812,108.632043 Z M84.6160455,108.632043 L93.6630188,108.632043 L93.6630188,72.1739308 L84.6160455,72.1739308 L84.6160455,108.632043 Z M121,73.9142009 L121,121 L0,121 L0,73.9142009 C9.04697329,69.4694973 18.6801197,66.0556226 28.7043832,63.6725769 C38.9226972,61.2885362 49.5321285,60 60.4673231,60 C71.4025178,60 82.0773028,61.2885362 92.2312684,63.6725769 C102.31988,66.0556226 111.953027,69.4694973 121,73.9142009 Z" id="Fill-4" fill="#FFFDFD" mask="url(#mask-6)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

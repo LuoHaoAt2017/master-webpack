@@ -1,0 +1,24 @@
+@titleColor: #fff; // 标题颜色
+@descBgColor: #EBF2FF; // 描述背景色
+@descFootColor: #304265; // 描述字体颜色
+
+.themeHeader(@externalBgImg: @externalBgImg) {
+  .image {
+    background-image: url(@externalBgImg);
+  }
+  .title {
+    color: @titleColor;
+  }
+  .desc__bg {
+    background-color: @descBgColor;
+    color: @descFootColor;
+  }
+}
+
+// 外链底部按钮
+// 按钮背景颜色
+@theme-1: #3071F2;
+@theme-2: #9A3FE1;
+@theme-3: #E7962B;
+@theme-4: #39A19A;
+@theme-5: #6184CE;

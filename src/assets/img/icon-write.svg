@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="35px" viewBox="0 0 34 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#CFE8FF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="新用户指引_移动" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="08-气泡" transform="translate(-77.000000, -538.000000)" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(75.000000, 538.000000)">
+                <g id="Group-4" transform="translate(15.506897, 18.714758) rotate(36.000000) translate(-15.506897, -18.714758) translate(10.506897, -0.785242)">
+                    <path d="M2,2.09610107e-13 L8,2.08721929e-13 C9.1045695,2.07537968e-13 10,0.8954305 10,2 L10,33.4751322 C10,34.0038905 9.79061109,34.5111328 9.41762721,34.8859238 L7.12644081,37.1882115 C5.95770273,38.3626123 4.05821334,38.3672029 2.88381251,37.1984648 C2.88038648,37.1950553 2.8769687,37.1916375 2.87355919,37.1882115 L0.582372793,34.8859238 C0.209388909,34.5111328 -3.93204868e-15,34.0038905 -3.99680289e-15,33.4751322 L-6.21724894e-15,2 C-6.35251969e-15,0.8954305 0.8954305,2.09590969e-13 2,2.09388062e-13 Z" id="Rectangle" fill="url(#linearGradient-1)"></path>
+                    <rect id="Rectangle" fill="#1890FF" x="0" y="6" width="10" height="3"></rect>
+                </g>
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="16" y="30" width="20" height="3" rx="1.5"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

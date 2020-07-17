@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>编组 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M105,124.5 C105,132.311168 110.597418,138.814989 118,140.219208 L118,140.5 L105,140.5 L16,140.5 C7.163444,140.5 1.082166e-15,133.336556 0,124.5 L0,0.5 L89,0.5 C97.836556,0.5 105,7.663444 105,16.5 L105,124.5 Z" id="path-1"></path>
+        <linearGradient x1="13.4948271%" y1="71.613814%" x2="98.1950841%" y2="14.4827379%" id="linearGradient-3">
+            <stop stop-color="#D7D9DC" offset="0%"></stop>
+            <stop stop-color="#A4A6AA" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="-5.68434189e-14" y="0" width="101" height="96" rx="8"></rect>
+        <filter x="-37.1%" y="-20.3%" width="152.5%" height="155.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="-11" dy="7" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.405622742   0 0 0 0 0.413374058   0 0 0 0 0.42875744  0 0 0 0.46020154 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="仪表盘" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="应用详情备份-4" transform="translate(-275.000000, -527.000000)">
+            <g id="编组-3" transform="translate(275.000000, 527.000000)">
+                <rect id="矩形" fill="#F5F7F9" x="0" y="0" width="200" height="200"></rect>
+                <g id="编组-2" transform="translate(24.000000, 29.000000)">
+                    <g id="Group-19-Copy-2">
+                        <rect id="Rectangle" fill="#B7B9BC" x="10" y="1" width="14" height="14"></rect>
+                        <g id="Path-2-+-Path-2-Copy-+-Path-2-Copy-2-+-Path-2-Copy-3蒙版" transform="translate(21.000000, 0.500000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="蒙版" fill="#B7B9BC" xlink:href="#path-1"></use>
+                            <path d="M72,-0.415265311 C84.6948168,-0.415265311 94.9859991,10.5938009 94.9859991,24.1741722 L94.9859991,140.5 L96,140.5 L96,24.1741722 C96,9.99471843 85.254834,-1.5 72,-1.5 L72,-0.415265311 Z" id="Path-2" fill="#BBBCC0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <path d="M53,-0.415265311 C65.6948168,-0.415265311 75.9859991,10.5938009 75.9859991,24.1741722 L75.9859991,140.5 L77,140.5 L77,24.1741722 C77,9.99471843 66.254834,-1.5 53,-1.5 L53,-0.415265311 Z" id="Path-2-Copy" fill="#BBBCC0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <path d="M34,-0.415265311 C46.6948168,-0.415265311 56.9859991,10.5938009 56.9859991,24.1741722 L56.9859991,140.5 L58,140.5 L58,24.1741722 C58,9.99471843 47.254834,-1.5 34,-1.5 L34,-0.415265311 Z" id="Path-2-Copy-2" fill="#BBBCC0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <path d="M14,-0.415265311 C26.6948168,-0.415265311 36.9859991,10.5938009 36.9859991,24.1741722 L36.9859991,140.5 L38,140.5 L38,24.1741722 C38,9.99471843 27.254834,-1.5 14,-1.5 L14,-0.415265311 Z" id="Path-2-Copy-3" fill="#BBBCC0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <path d="M-5,-0.915265311 C7.69481679,-0.915265311 17.9859991,10.0938009 17.9859991,23.6741722 L17.9859991,140 L19,140 L19,23.6741722 C19,9.49471843 8.254834,-2 -5,-2 L-5,-0.915265311 Z" id="Path-2-Copy-3备份" fill="#BBBCC0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M10.5,1 L10.5,1 C16.2989899,1 21,5.70101013 21,11.5 L21,19 L0,19 L0,11.5 C-7.10171439e-16,5.70101013 4.70101013,1 10.5,1 Z" id="Rectangle" fill="url(#linearGradient-3)"></path>
+                        <path d="M21.6960537,30.5 L126.696054,30.5" id="Path-3" stroke="#B4B6BA"></path>
+                        <path d="M21.6960537,53.5 L126.696054,53.5" id="Path-3-Copy" stroke="#B4B6BA"></path>
+                        <path d="M21.6960537,77.25 L126.696054,77.25" id="Path-3-Copy-2" stroke="#B4B6BA"></path>
+                        <path d="M21.6960537,99.5 L126.696054,99.5" id="Path-3-Copy-3" stroke="#B4B6BA"></path>
+                        <path d="M21.6960537,122.5 L125.5,122.5" id="Path-3-Copy-4" stroke="#B4B6BA"></path>
+                    </g>
+                    <g id="Group-15" transform="translate(58.000000, 19.000000)">
+                        <g id="Group-18">
+                            <g id="Group-8">
+                                <g id="Group-2">
+                                    <g id="Rectangle">
+                                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                        <use fill="#F3F4F7" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                    </g>
+                                    <path d="M8,0 L93,0 C97.418278,8.0701597e-15 101,3.581722 101,8 L101,20.5882353 L0,20.5882353 L0,14.2941176 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z" id="Combined-Shape" fill="#D7D9DC"></path>
+                                </g>
+                            </g>
+                            <g id="Group" transform="translate(2.000000, 31.000000)" opacity="0.5" stroke="#D7D9DC">
+                                <path d="M0,0.5 L101,0.5" id="Path-5"></path>
+                                <path d="M0,13.5 L101,13.5" id="Path-5-Copy"></path>
+                                <path d="M0,25.5 L101,25.5" id="Path-5-Copy-2"></path>
+                                <path d="M0,37.5 L101,37.5" id="Path-5-Copy-3"></path>
+                                <path d="M0,49.5 L101,49.5" id="Path-5-Copy-4"></path>
+                            </g>
+                            <path d="M34.5,21 L34.5,96" id="Path-6" stroke="#D7D9DC" opacity="0.5"></path>
+                        </g>
+                        <circle id="Oval" fill="#AFB1B6" cx="12.5" cy="12.5" r="3.5"></circle>
+                        <circle id="Oval-Copy" fill="#A4A6AA" cx="22.5" cy="12.5" r="3.5"></circle>
+                        <circle id="Oval-Copy-2" fill="#E6E8EC" cx="32.5" cy="12.5" r="3.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
