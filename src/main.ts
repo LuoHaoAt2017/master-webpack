@@ -2,7 +2,7 @@
 import 'babel-polyfill'; // 转码es6 api
 import Vue from 'vue';
 import routes from '@/router';
-// import vconsole from 'vconsole';
+import vconsole from 'vconsole';
 import VueLazyload from 'vue-lazyload';
 
 import * as dd from 'dingtalk-jsapi';

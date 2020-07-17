@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const VConsoleWebpackPlugin = require('vconsole-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const lessVars = require('@h3/theme-mobile/presets/h3yun/default');
 const measure = new SpeedMeasurePlugin();
 
 function resolve(name) {
@@ -66,9 +67,10 @@ module.exports = measure.wrap({
             },
             {
                 test: /.(less|css)$/,
-                use: ['css-loader', {
+                use: ['style-loader', 'css-loader', {
                     loader: 'less-loader',
                     options: {
+                        ...lessVars,
                         javascriptEnabled: true
                     }
                 }]
