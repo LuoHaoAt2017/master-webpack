@@ -15,7 +15,7 @@
             grid-auto-flow: row;
             grid-template-columns: repeat(2, auto);
             grid-column-gap: 10px;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-content: center;
             li {
                 justify-self: center;
