@@ -6,6 +6,7 @@ import CodeSegment from '@/views/code-segment';
 import Compression from '@/views/file-compression';
 import ModuleMerge from '@/views/module-merge';
 import Transcoder from '@/views/transcoder';
+import PersonPlugin from '@/views/person-plugin';
 // const Home = () => import('@/views/home');
 // const HMR = () => import('@/views/hot-module-replace');
 // const CodeSegment = () => import('@/views/code-segment');
@@ -18,43 +19,43 @@ const navs = [
 	{
 		label: '首页',
 		value: '/home'
-	},
-	{
-		label: '代码转换',
-		value: '/transcoder'
-	},
-	{
-		label: '文件压缩',
-		value: '/compression'
-	},
-	{
-		label: '代码分割',
-		value: '/code-segment'
-	},
-	{
-		label: '模块合并',
-		value: '/module-merge'
-	},
-	{
-		label: '模块热替换',
-		value: '/hot-module-replace'
-	},
-	{
-		label: 'webpack性能优化',
-		value: '/optimization'
-	},
-	{
-		label: '文件监听原理',
-		value: '/monitor'
-	},
-	{
-		label: '自定义loader',
-		value: '/loader'
-	},
+  },
 	{
 		label: '自定义plugin',
 		value: '/plugin'
-	}
+  },
+  // {
+	// 	label: '自定义loader',
+	// 	value: '/loader'
+	// },
+	// {
+	// 	label: '代码转换',
+	// 	value: '/transcoder'
+	// },
+	// {
+	// 	label: '文件压缩',
+	// 	value: '/compression'
+	// },
+	// {
+	// 	label: '代码分割',
+	// 	value: '/code-segment'
+	// },
+	// {
+	// 	label: '模块合并',
+	// 	value: '/module-merge'
+	// },
+	// {
+	// 	label: '模块热替换',
+	// 	value: '/hot-module'
+	// },
+	// {
+	// 	label: 'webpack性能优化',
+	// 	value: '/optimization'
+	// },
+	// {
+	// 	label: '文件监听原理',
+	// 	value: '/monitor'
+	// },
 ];
 
 class App extends React.Component {
@@ -88,7 +89,10 @@ class App extends React.Component {
 							<Route path="/home">
 								<Home/>
 							</Route>
-							<Route path="/hot-module-replace">
+              <Route path="/plugin">
+								<PersonPlugin />
+							</Route>
+							<Route path="/hot-module">
 								<HMR />
 							</Route>
 							<Route path="/code-segment">

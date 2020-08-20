@@ -69,9 +69,10 @@ module.exports = smp.wrap({
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './public/index.html'),
+            template: resolve('./public/index.html'),
+            favicon: resolve('./public/logo.ico'),
             filename: 'index.html',
-            hash: true
+            hash: true,
         }),
         new CleanWebpackPlugin(),
         new PurgecssPlugin({

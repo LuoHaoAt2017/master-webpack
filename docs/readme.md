@@ -3,7 +3,7 @@
 读取命令行上的参数，合并参数，实例化plugin。
 
 - 编译阶段：
-初始化一个compiler对象，通过插件的apply方法加载插件，通过compiler.run执行编译。
+初始化一个compiler对象，通过插件的apply方法注册插件，通过compiler.run执行编译。
 根据entry找到入口，从入口模块开始调用loader对模块进行翻译，如果模块之间存在依赖，
 对依赖的模块也调用loader进行翻译。编译完成之后得到编译的内容以及模块之间的依赖关系。
 
@@ -24,8 +24,14 @@ ES6 Module
 
 ### Loader和Plugin的区别：
 作用不同
+loader可以用来解析非js资源，比如图片，字体，样式。
+plugin用来拓展webpack功能，比如文件压缩，公共文件提取，加快编译。
 
 使用方式
+loader在module.rules中配置，rules是一个数组，数组中的每一项都是一个资源的解析规则。
+不同的资源资源需要不同的loader去翻译，转换。
+
+plugin在plugins数组上配置，plugins数组中的每一项都是一个plugin实例。
 
 参考：https://juejin.im/post/5e6f4b4e6fb9a07cd443d4a5#heading-0
 
@@ -38,8 +44,8 @@ source-map 是将编译、打包、压缩后的代码映射回源代码的过程
 - 使用高版本的 Webpack
 - 提取页面公共资源
 - 缩小打包作用域 (exclude/include)
-- 多进程构建 thread-loader
-- 多进程并行压缩 webpack-uglify-js-plugin 中的paralle选项
+- 多进程并行构建 thread-loader
+- 多进程并行压缩 webpack-uglifyjs-plugin 中的paralle选项
 - Tree shaking 
 描述移除 JavaScript 上下文中的未引用代码
 JS的Tree shaking要生效，需要采取ES2015 模块系统 import export。
