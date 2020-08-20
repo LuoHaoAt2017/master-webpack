@@ -68,7 +68,6 @@ module.exports = {
             },
         ]
     },
-    devtool: 'inline-source-map', // 开发环境使用
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
