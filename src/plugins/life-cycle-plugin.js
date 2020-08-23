@@ -13,24 +13,28 @@ class LifeCyclePlugin {
     });
 
     // 编译阶段
-    compiler.plugin('run', function() {
+    compiler.plugin('run', function(compilation, callback) {
       console.log('启动一次新的编译');
+      callback();
     });
-    compiler.plugin('watch-run', function() {
+    compiler.plugin('watch-run', function(compilation, callback) {
       console.log('在监听模式下，部分文件发生变化导致重新编译。');
+      callback();
     });
-    compiler.plugin('compile', function() {
+    compiler.plugin('compile', function(compilation) {
       console.log('一次新的编译即将启动');
     });
-    compiler.plugin('compilation', function() {
+    compiler.plugin('compilation', function(compilation) {
       // 编译阶段最重要的事件，compilation阶段调用loader对文件进行转换。
       console.log('在开发模式下，当检测到文件发生变化时，一次新的compilation被创建。');
     });
-    compiler.plugin('make', function() {
+    compiler.plugin('make', function(compilation, callback) {
       console.log('一次compilation创建完毕，即将从入口开始递归地读取文件。');
+      callback();
     });
-    compiler.plugin('after-compile', function() {
+    compiler.plugin('after-compile', function(compilation, callback) {
       console.log('一次compilation执行完毕。');
+      callback();
     });
 
     // 输出阶段
@@ -52,8 +56,9 @@ class LifeCyclePlugin {
             `);
       callback();
     });
-    compiler.plugin('after-emit', function() {
+    compiler.plugin('after-emit', function(compilation, callback) {
       console.log('文件输出完毕');
+      callback();
     });
     compiler.plugin('done', function() {
       console.log('成功完成一次完整的编译和输出流程');
