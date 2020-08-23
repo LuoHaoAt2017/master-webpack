@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const LifeCyclePlugin = require('lifecycle-plugin');
+const H3LogoPlugin = require('h3-logo-plugin');
 
 function resolve(param) {
   return path.resolve(__dirname, param);
@@ -32,7 +32,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new LifeCyclePlugin(),
+    new H3LogoPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './public/index.html'),
