@@ -10,4 +10,7 @@ webpack原理学习
 ### react-router 页面刷新，页面404。
 将BrowserRouter改成HashRouter。
 
-### 自己写一个webpack
+### 自己写一个plugin
+webpack的事件流机制和观察者模式
+
+你的plugin应该监听事件流中的哪个事件呢

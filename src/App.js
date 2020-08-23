@@ -1,14 +1,19 @@
 import React from 'react';
 import { HashRouter as Router, Route, Redirect, Link, Switch } from 'react-router-dom';
-import Home from '@/pages/Home';
 import '@/assets/scss/app.scss';
 import '@/assets/scss/home.scss';
 import '@/assets/scss/common.scss';
+import Home from '@/pages/Home';
+import Plugin from '@/pages/Plugin';
 
 const navs = [
 	{
 		label: '首页',
 		value: '/home'
+	},
+	{
+		label: '自定义插件',
+		value: '/plugin'
 	}
 ];
 
@@ -43,6 +48,9 @@ class App extends React.Component {
 							<Route path="/home">
 								<Home/>
 							</Route>
+							<Route path="/plugin">
+								<Plugin/>
+							</Route>
 							<Redirect to="/home" />
 						</Switch>
 					</div>
@@ -52,8 +60,14 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		const url = process.env.APP_URL;
-		console.log(url);
+		this.listenReload();
+	}
+
+	listenReload() {
+		window.addEventListener('load', (evt) => {
+			const href = window.location.hash.slice(1);
+			this.changeRoute(href);
+		});
 	}
 
 	changeRoute(value) {

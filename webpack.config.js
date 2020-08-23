@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const BootAnimationPlugin = require('./src/plugins/boot-animation-plugin');
 const smp = new SpeedMeasurePlugin();
 
 function resolve(param) {
@@ -58,6 +59,7 @@ module.exports = smp.wrap({
         ]
     },
     plugins: [
+        new BootAnimationPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
             filename: 'index.html',
