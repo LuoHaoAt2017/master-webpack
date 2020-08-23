@@ -1,8 +1,7 @@
 const path = require('path');
-const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const LifeCyclePlugin = require('./src/plugins/life-cycle-plugin');
+const LifeCyclePlugin = require('lifecycle-plugin');
 
 function resolve(param) {
   return path.resolve(__dirname, param);
