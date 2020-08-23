@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const WebpackMerge = require('webpack-merge');
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const config = require('./webpack.config');
 const SizePlugin = require('size-plugin');
 
@@ -27,7 +26,6 @@ module.exports = WebpackMerge(config, {
             'process.env.NODE_ENV': JSON.stringify('production'), //必须添加JSON.stringify
             'process.env.APP_URL': JSON.stringify('http://yyy')
         }),
-        new SizePlugin(),
-        new BundleAnalyzerPlugin()
+        new SizePlugin()
     ]
 });

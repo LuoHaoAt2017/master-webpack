@@ -3,16 +3,13 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
-const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
-const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const BootAnimationPlugin = require('./src/plugins/boot-animation-plugin');
-const smp = new SpeedMeasurePlugin();
 
 function resolve(param) {
     return path.resolve(__dirname, param);
 }
 
-module.exports = smp.wrap({
+module.exports = {
     entry: {
         main: resolve('src/main.js')
     },
@@ -74,7 +71,5 @@ module.exports = smp.wrap({
         alias: {
             '@': path.resolve(__dirname, 'src')
         }
-    },
-    optimization: {
     }
-});
+};
