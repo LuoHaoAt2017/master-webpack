@@ -1,11 +1,8 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-dev-server --open --config webpack.dev.js",
-    "start": "webpack-dev-server --open --config webpack.prod.js",
-    "build": "webpack --progress --config webpack.prod.js",
-    "compile": "webpack --config webpack.dev.js",
-    "http-server": "http-server"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --progress --config webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

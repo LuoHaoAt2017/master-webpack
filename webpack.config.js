@@ -2,7 +2,6 @@ const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// 将未用到的css进行清除(css的Tree-Shaking)
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
@@ -13,15 +12,6 @@ function resolve(param) {
 }
 
 module.exports = smp.wrap({
-    watch: true, // 开启监听模式，文件发生变化，重新编译，webpack-dev-server 默认开启监听模式。
-    watchOptions: {
-        // 不监听的文件或者文件夹
-        ignored: /node_modules/,
-        // 监听到变化发生后会等300ms再去执行，默认300ms
-        aggregateTimeout: 300,
-        // 判断文件是否发生变化是通过不停询问系统指定文件有没有变化实现的，默认每秒问1000次
-        poll: 1000
-    },
     entry: {
         main: resolve('src/main.js')
     },
@@ -84,29 +74,5 @@ module.exports = smp.wrap({
         }
     },
     optimization: {
-        minimizer: [
-            new UglifyWebpackPlugin({
-                test: /\.js$/,
-                parallel: true, // 并行构建，加快构建，缩短时间。
-                include: resolve('src')
-            })
-        ],
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    name: "vendor", //第三方库
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: "all",
-                    priority: 10 // 优先级
-                },
-                common: {
-                    name: "common", //公共代码
-                    test: /[\\/]src[\\/]/,
-                    minSize: 1024,
-                    chunks: "all",
-                    priority: 5
-                }
-            }
-        },
     }
 });
