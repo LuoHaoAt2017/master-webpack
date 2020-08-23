@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --progress --config webpack.prod.js"
+    "build": "webpack --progress --config webpack.prod.js",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -38,9 +39,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@antv/g2": "^4.0.8",
-    "@antv/l7": "^2.2.6",
-    "express": "^4.17.1",
+    "jest": "^26.4.2",
     "loadsh": "0.0.4",
     "moment": "^2.25.3",
     "react": "^16.13.1",
