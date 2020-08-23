@@ -2,7 +2,6 @@ const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 const LifeCyclePlugin = require('./src/plugins/life-cycle-plugin');
 
 function resolve(param) {
@@ -21,38 +20,16 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ['thread-loader', 'babel-loader'],
-        include: path.resolve(__dirname, 'src')
+        use: ['babel-loader']
       },
       {
         test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name][hash:8].[ext]',
-              outputPath: 'images/'
-            }
-          }
-        ],
-        exclude: path.resolve(__dirname, 'node_modules'),
+        use: ['file-loader']
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name][hash:8].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.md$/,
-        use: "raw-loader"
-      },
+        use: ['file-loader']
+      }
     ]
   },
   plugins: [
@@ -62,9 +39,6 @@ module.exports = {
       template: path.resolve(__dirname, './public/index.html'),
       filename: 'index.html',
       hash: true
-    }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${resolve('src')}/**/*`, { nodir: true })
     })
   ],
   resolve: {
