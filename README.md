@@ -14,3 +14,7 @@ webpack原理学习
 webpack的事件流机制和观察者模式
 
 你的plugin应该监听事件流中的哪个事件呢
+
+### npm
+当package.json文件中的private置为true时无法通过npm publish发布这个包。
+当package.json文件中的peerDependencies设置有值时，应该手动安装这些附带的依赖。
