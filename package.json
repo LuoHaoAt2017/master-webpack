@@ -1,6 +1,7 @@
 {
   "name": "master-webpack",
   "version": "1.0.0",
+  "private": true,
   "description": "webpack原理学习",
   "main": "webpack.config.js",
   "repository": {
